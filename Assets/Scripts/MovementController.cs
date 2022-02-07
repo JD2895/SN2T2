@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class CharacterMovement : MonoBehaviour
+public class MovementController : MonoBehaviour
 {
     Rigidbody2D rb;
     Controls controls;
@@ -28,9 +28,11 @@ public class CharacterMovement : MonoBehaviour
         if (controllable)
         {
             controls.Movement.Left.performed += _ => MoveLeftStart();
-            controls.Movement.Right.performed += _ => MoveRightStart();
             controls.Movement.Left.canceled += _ => MoveLeftEnd();
+            controls.Movement.Right.performed += _ => MoveRightStart();
             controls.Movement.Right.canceled += _ => MoveRightEnd();
+            controls.Movement.Down.performed += _ => DownStart();
+            controls.Movement.Down.canceled += _ => DownEnd();
             controls.Movement.Jump.performed += _ => JumpStart();
             controls.Movement.Jump.canceled += _ => JumpEnd();
         }
@@ -111,14 +113,28 @@ public class CharacterMovement : MonoBehaviour
     }
     #endregion
 
+    #region Down logic
+    public void DownStart()
+    {
+        Debug.Log("Down Start");
+        return;
+    }
+
+    public void DownEnd()
+    {
+        Debug.Log("Down End");
+        return;
+    }
+    #endregion
+
     #region Jump control
-    private void JumpStart()
+    public void JumpStart()
     {
         if (controllable)
             ApplyJumpForce();
     }
 
-    private void JumpEnd()
+    public void JumpEnd()
     {
         if (controllable)
             if (rb != null)
