@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class ActionRecorder : MonoBehaviour
 {
     public GameObject recordedObject;
+    public bool recordingEnabled;
 
     bool isRecording = false;
     bool isPlaying = false;
@@ -34,8 +35,9 @@ public class ActionRecorder : MonoBehaviour
         controls.Movement.Jump.performed += _ => RecordMove(ActionType.JumpStart);
         controls.Movement.Jump.canceled += _ => RecordMove(ActionType.JumpEnd);
 
-        controls.Recorder.Record.performed += _ => StartRecording();
+        controls.Recorder.Record.performed += _ => StartRecording(RecordingMode.Overwrite);
         controls.Recorder.Play.performed += _ => StartPlayback();
+        controls.Recorder.AdditiveRecord.performed += _ => StartRecording(RecordingMode.Additive);
     }
 
     private void OnEnable()
@@ -50,15 +52,10 @@ public class ActionRecorder : MonoBehaviour
 
     private void Start()
     {
-        if (recordedObject == null)
-        {
-            recordedObject = GameObject.Find("Player");
-        }
-
         startTime = Time.time;
         startPosition = recordedObject.transform.position;
         movementController = recordedObject.GetComponent<MovementController>();
-        StartRecording();
+        //StartRecording();
     }
 
     private void RecordMove(ActionType newAction)
@@ -73,7 +70,7 @@ public class ActionRecorder : MonoBehaviour
     #region Playback
     private void StartPlayback()
     {
-        Debug.Log("Starting Move Playback");
+        //Debug.Log("Starting Move Playback");
         //ChangeControlState(false);
         isRecording = false;
         recordedObject.transform.position = startPosition;
@@ -103,16 +100,16 @@ public class ActionRecorder : MonoBehaviour
                     switch (nextMove.action)
                     {
                         case ActionType.LeftStart:
-                            movementController?.MoveLeftStart();
+                            movementController?.MoveHorizontalStart(MoveDir.Left);
                             break;
                         case ActionType.LeftEnd:
-                            movementController?.MoveLeftEnd();
+                            movementController?.MoveHorizontalEnd(MoveDir.Left);
                             break;
                         case ActionType.RightStart:
-                            movementController?.MoveRightStart();
+                            movementController?.MoveHorizontalStart(MoveDir.Right);
                             break;
                         case ActionType.RightEnd:
-                            movementController?.MoveRightEnd();
+                            movementController?.MoveHorizontalEnd(MoveDir.Right);
                             break;
                         case ActionType.DownStart:
                             movementController?.DownStart();
@@ -149,11 +146,14 @@ public class ActionRecorder : MonoBehaviour
     #endregion
 
     #region Recording
-    private void StartRecording()
+    private void StartRecording(RecordingMode recordingMode)
     {
-        // Prep
-        ClearRecordedMoves(false);
         StopPlayback();
+
+        if (recordingMode == RecordingMode.Overwrite && recordingEnabled)
+        {
+            ClearRecordedMoves(false);
+        }
         //ChangeControlState(true);
 
         Debug.Log("Starting Move Recording");
@@ -163,7 +163,14 @@ public class ActionRecorder : MonoBehaviour
         recordedObject.transform.position = startPosition;
         recordedObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 
-        isRecording = true;
+        if ((recordingMode == RecordingMode.Overwrite || recordingMode == RecordingMode.Additive) && recordingEnabled )
+        {
+            isRecording = true;
+        }
+        if (recordingMode == RecordingMode.Additive)
+        {
+            StartPlayback();
+        }
     }
 
     private void ClearRecordedMoves(bool stopOtherActions = true)
@@ -184,6 +191,12 @@ public class ActionRecorder : MonoBehaviour
             //Debug.Log("Stopping Recording");
             isRecording = false;
         }
+    }
+
+    private enum RecordingMode
+    {
+        Overwrite,
+        Additive
     }
     #endregion
 

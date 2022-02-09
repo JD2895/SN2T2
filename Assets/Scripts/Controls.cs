@@ -134,7 +134,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Play & Record"",
+                    ""name"": ""AdditiveRecord"",
                     ""type"": ""Button"",
                     ""id"": ""b71dce9f-71f1-4654-a8ff-6c2b27e8fd0b"",
                     ""expectedControlType"": ""Button"",
@@ -143,7 +143,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Save Recordings"",
+                    ""name"": ""SaveRecordings"",
                     ""type"": ""Button"",
                     ""id"": ""327d29fb-66eb-4f67-9a07-ccec5a6c4572"",
                     ""expectedControlType"": ""Button"",
@@ -182,7 +182,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Play & Record"",
+                    ""action"": ""AdditiveRecord"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -193,7 +193,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Save Recordings"",
+                    ""action"": ""SaveRecordings"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -212,8 +212,8 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         m_Recorder = asset.FindActionMap("Recorder", throwIfNotFound: true);
         m_Recorder_Record = m_Recorder.FindAction("Record", throwIfNotFound: true);
         m_Recorder_Play = m_Recorder.FindAction("Play", throwIfNotFound: true);
-        m_Recorder_PlayRecord = m_Recorder.FindAction("Play & Record", throwIfNotFound: true);
-        m_Recorder_SaveRecordings = m_Recorder.FindAction("Save Recordings", throwIfNotFound: true);
+        m_Recorder_AdditiveRecord = m_Recorder.FindAction("AdditiveRecord", throwIfNotFound: true);
+        m_Recorder_SaveRecordings = m_Recorder.FindAction("SaveRecordings", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -332,7 +332,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
     private IRecorderActions m_RecorderActionsCallbackInterface;
     private readonly InputAction m_Recorder_Record;
     private readonly InputAction m_Recorder_Play;
-    private readonly InputAction m_Recorder_PlayRecord;
+    private readonly InputAction m_Recorder_AdditiveRecord;
     private readonly InputAction m_Recorder_SaveRecordings;
     public struct RecorderActions
     {
@@ -340,7 +340,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         public RecorderActions(@Controls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Record => m_Wrapper.m_Recorder_Record;
         public InputAction @Play => m_Wrapper.m_Recorder_Play;
-        public InputAction @PlayRecord => m_Wrapper.m_Recorder_PlayRecord;
+        public InputAction @AdditiveRecord => m_Wrapper.m_Recorder_AdditiveRecord;
         public InputAction @SaveRecordings => m_Wrapper.m_Recorder_SaveRecordings;
         public InputActionMap Get() { return m_Wrapper.m_Recorder; }
         public void Enable() { Get().Enable(); }
@@ -357,9 +357,9 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @Play.started -= m_Wrapper.m_RecorderActionsCallbackInterface.OnPlay;
                 @Play.performed -= m_Wrapper.m_RecorderActionsCallbackInterface.OnPlay;
                 @Play.canceled -= m_Wrapper.m_RecorderActionsCallbackInterface.OnPlay;
-                @PlayRecord.started -= m_Wrapper.m_RecorderActionsCallbackInterface.OnPlayRecord;
-                @PlayRecord.performed -= m_Wrapper.m_RecorderActionsCallbackInterface.OnPlayRecord;
-                @PlayRecord.canceled -= m_Wrapper.m_RecorderActionsCallbackInterface.OnPlayRecord;
+                @AdditiveRecord.started -= m_Wrapper.m_RecorderActionsCallbackInterface.OnAdditiveRecord;
+                @AdditiveRecord.performed -= m_Wrapper.m_RecorderActionsCallbackInterface.OnAdditiveRecord;
+                @AdditiveRecord.canceled -= m_Wrapper.m_RecorderActionsCallbackInterface.OnAdditiveRecord;
                 @SaveRecordings.started -= m_Wrapper.m_RecorderActionsCallbackInterface.OnSaveRecordings;
                 @SaveRecordings.performed -= m_Wrapper.m_RecorderActionsCallbackInterface.OnSaveRecordings;
                 @SaveRecordings.canceled -= m_Wrapper.m_RecorderActionsCallbackInterface.OnSaveRecordings;
@@ -373,9 +373,9 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @Play.started += instance.OnPlay;
                 @Play.performed += instance.OnPlay;
                 @Play.canceled += instance.OnPlay;
-                @PlayRecord.started += instance.OnPlayRecord;
-                @PlayRecord.performed += instance.OnPlayRecord;
-                @PlayRecord.canceled += instance.OnPlayRecord;
+                @AdditiveRecord.started += instance.OnAdditiveRecord;
+                @AdditiveRecord.performed += instance.OnAdditiveRecord;
+                @AdditiveRecord.canceled += instance.OnAdditiveRecord;
                 @SaveRecordings.started += instance.OnSaveRecordings;
                 @SaveRecordings.performed += instance.OnSaveRecordings;
                 @SaveRecordings.canceled += instance.OnSaveRecordings;
@@ -394,7 +394,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
     {
         void OnRecord(InputAction.CallbackContext context);
         void OnPlay(InputAction.CallbackContext context);
-        void OnPlayRecord(InputAction.CallbackContext context);
+        void OnAdditiveRecord(InputAction.CallbackContext context);
         void OnSaveRecordings(InputAction.CallbackContext context);
     }
 }

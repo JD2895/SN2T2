@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System;
 
 public class MovementController : MonoBehaviour
 {
     Rigidbody2D rb;
     Controls controls;
     Vector3 newVelocity;
-    bool controllable = true;
+    bool controlEnabled = true;
 
     [Header("Side Movement")]
     public float sideMoveAcceleration;
@@ -25,12 +26,12 @@ public class MovementController : MonoBehaviour
     {
         controls = new Controls();
 
-        if (controllable)
+        if (controlEnabled)
         {
-            controls.Movement.Left.performed += _ => MoveLeftStart();
-            controls.Movement.Left.canceled += _ => MoveLeftEnd();
-            controls.Movement.Right.performed += _ => MoveRightStart();
-            controls.Movement.Right.canceled += _ => MoveRightEnd();
+            controls.Movement.Left.performed += _ => MoveHorizontalStart(MoveDir.Left);
+            controls.Movement.Left.canceled += _ => MoveHorizontalEnd(MoveDir.Left);
+            controls.Movement.Right.performed += _ => MoveHorizontalStart(MoveDir.Right);
+            controls.Movement.Right.canceled += _ => MoveHorizontalEnd(MoveDir.Right);
             controls.Movement.Down.performed += _ => DownStart();
             controls.Movement.Down.canceled += _ => DownEnd();
             controls.Movement.Jump.performed += _ => JumpStart();
@@ -90,25 +91,14 @@ public class MovementController : MonoBehaviour
     }
 
     #region Side movement control
-    public void MoveLeftStart()
+    public void MoveHorizontalStart(MoveDir dirToMove)
     {
-        toMoveDir = MoveDir.Left;
+        toMoveDir = dirToMove;
     }
 
-    public void MoveRightStart()
+    public void MoveHorizontalEnd(MoveDir dirToMove)
     {
-        toMoveDir = MoveDir.Right;
-    }
-
-    public void MoveLeftEnd()
-    {
-        if (toMoveDir == MoveDir.Left)
-            toMoveDir = MoveDir.None;
-    }
-
-    public void MoveRightEnd()
-    {
-        if (toMoveDir == MoveDir.Right)
+        if (toMoveDir == dirToMove)
             toMoveDir = MoveDir.None;
     }
     #endregion
@@ -130,18 +120,17 @@ public class MovementController : MonoBehaviour
     #region Jump control
     public void JumpStart()
     {
-        if (controllable)
+        if (rb != null)
             ApplyJumpForce();
     }
 
     public void JumpEnd()
     {
-        if (controllable)
-            if (rb != null)
-            {
-                if (rb.velocity.y > minimumVelocityForJumpBrake)
-                    rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y / jumpBrakeMultiplier);
-            }
+        if (rb != null)
+        {
+            if (rb.velocity.y > minimumVelocityForJumpBrake)
+                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y / jumpBrakeMultiplier);
+        }
     }
 
     public void ApplyJumpForce()
@@ -165,13 +154,13 @@ public class MovementController : MonoBehaviour
             controls.Movement.Disable();
         }
         toMoveDir = MoveDir.None;
-        controllable = toSet;
+        controlEnabled = toSet;
     }
+}
 
-    public enum MoveDir
-    {
-        Left,
-        None,
-        Right
-    }
+public enum MoveDir
+{
+    Left,
+    None,
+    Right
 }

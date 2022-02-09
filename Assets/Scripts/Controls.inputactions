@@ -112,7 +112,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Play & Record",
+                    "name": "AdditiveRecord",
                     "type": "Button",
                     "id": "b71dce9f-71f1-4654-a8ff-6c2b27e8fd0b",
                     "expectedControlType": "Button",
@@ -121,7 +121,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Save Recordings",
+                    "name": "SaveRecordings",
                     "type": "Button",
                     "id": "327d29fb-66eb-4f67-9a07-ccec5a6c4572",
                     "expectedControlType": "Button",
@@ -160,7 +160,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Play & Record",
+                    "action": "AdditiveRecord",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -171,7 +171,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Save Recordings",
+                    "action": "SaveRecordings",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
