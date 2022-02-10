@@ -85,15 +85,23 @@ public class RecordingManagerInspector : Editor
         GUILayout.EndHorizontal();
 
         GUILayout.BeginHorizontal();
-        GUILayout.Label("Focus on recorded");
-        GUILayout.FlexibleSpace();
-        if (GUILayout.Button("Enable", GUILayout.Width(81)))
+        if (GUILayout.Button("Focus on Recorded"))
         {
             for (int i = 0; i < recManager.cast.Count; i++)
             {
                 recManager.cast[i].movementEnabled = recManager.cast[i].recordingEnabled;
                 recManager.cast[i].specialEnabled = recManager.cast[i].recordingEnabled;
             }
+            // Immediately change control if already in play mode
+            if (Application.isPlaying)
+            {
+                recManager.SetControl();
+            }
+        }
+        if(Application.isPlaying)
+        if (GUILayout.Button("Set Movement Control"))
+        {
+            recManager.SetControl();
         }
         GUILayout.EndHorizontal();
     }

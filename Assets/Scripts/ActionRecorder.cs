@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class ActionRecorder : MonoBehaviour
 {
     public GameObject recordedObject;
-    public bool recordingEnabled;
+    bool recordingEnabled = true;
 
     bool isRecording = false;
     bool isPlaying = false;
@@ -35,9 +35,9 @@ public class ActionRecorder : MonoBehaviour
         controls.Movement.Jump.performed += _ => RecordMove(ActionType.JumpStart);
         controls.Movement.Jump.canceled += _ => RecordMove(ActionType.JumpEnd);
 
-        controls.Recorder.Record.performed += _ => StartRecording(RecordingMode.Overwrite);
-        controls.Recorder.Play.performed += _ => StartPlayback();
-        controls.Recorder.AdditiveRecord.performed += _ => StartRecording(RecordingMode.Additive);
+        //controls.Recorder.Record.performed += _ => StartRecording(RecordingMode.Overwrite);
+        //controls.Recorder.Play.performed += _ => StartPlayback();
+        //controls.Recorder.AdditiveRecord.performed += _ => StartRecording(RecordingMode.Additive);
     }
 
     private void OnEnable()
@@ -68,9 +68,9 @@ public class ActionRecorder : MonoBehaviour
     }
 
     #region Playback
-    private void StartPlayback()
+    public void StartPlayback()
     {
-        //Debug.Log("Starting Move Playback");
+        Debug.Log("Starting Move Playback");
         //ChangeControlState(false);
         isRecording = false;
         recordedObject.transform.position = startPosition;
@@ -83,10 +83,11 @@ public class ActionRecorder : MonoBehaviour
         }
         else
         {
-            //Debug.Log("No moves to play");
+            Debug.Log("No moves to play");
         }
 
     }
+
     public IEnumerator PlayingMoves()
     {
         playbackStartTime = Time.time;
@@ -138,7 +139,7 @@ public class ActionRecorder : MonoBehaviour
     {
         if (isPlaying)
         {
-            //Debug.Log("Stopping playback");
+            Debug.Log("Stopping playback");
             this.StopCoroutine(playbackRoutine);
             isPlaying = false;
         }
@@ -146,7 +147,7 @@ public class ActionRecorder : MonoBehaviour
     #endregion
 
     #region Recording
-    private void StartRecording(RecordingMode recordingMode)
+    public void StartRecording(RecordingMode recordingMode)
     {
         StopPlayback();
 
@@ -175,7 +176,7 @@ public class ActionRecorder : MonoBehaviour
 
     private void ClearRecordedMoves(bool stopOtherActions = true)
     {
-        //Debug.Log("Clearing Recorded Moves");
+        Debug.Log("Clearing Recorded Moves");
         if (stopOtherActions)
         {
             StopRecording();
@@ -184,20 +185,15 @@ public class ActionRecorder : MonoBehaviour
         recordedActions.Clear();
     }
 
-    private void StopRecording()
+    public void StopRecording()
     {
         if (isRecording)
         {
-            //Debug.Log("Stopping Recording");
+            Debug.Log("Stopping Recording");
             isRecording = false;
         }
     }
 
-    private enum RecordingMode
-    {
-        Overwrite,
-        Additive
-    }
     #endregion
 
     #region ActionTime definition
@@ -226,4 +222,10 @@ public class ActionRecorder : MonoBehaviour
         JumpEnd
     }
     #endregion
+}
+
+public enum RecordingMode
+{
+    Overwrite,
+    Additive
 }
