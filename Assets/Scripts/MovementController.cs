@@ -156,6 +156,11 @@ public class MovementController : MonoBehaviour
         toMoveDir = MoveDir.None;
         controlEnabled = toSet;
     }
+
+    public void Reset()
+    {
+        toMoveDir = MoveDir.None;
+    }
 }
 
 public enum MoveDir

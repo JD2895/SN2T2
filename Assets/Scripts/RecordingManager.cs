@@ -49,6 +49,7 @@ public class RecordingManager : MonoBehaviour
             {
                 cast[i].actor.GetComponent<ActionRecorder>().StopRecording();
                 cast[i].actor.GetComponent<ActionRecorder>().StopPlayback();
+                cast[i].actor.GetComponent<MovementController>().Reset();
 
                 if (cast[i].recordingEnabled)
                     cast[i].actor.GetComponent<ActionRecorder>().StartRecording(recordingMode);
@@ -67,6 +68,7 @@ public class RecordingManager : MonoBehaviour
                 cast[i].actor.GetComponent<ActionRecorder>().StopRecording();
                 cast[i].actor.GetComponent<ActionRecorder>().StopPlayback();
 
+                cast[i].actor.GetComponent<MovementController>().Reset();
                 cast[i].actor.GetComponent<ActionRecorder>().StartPlayback();
             }
         }
