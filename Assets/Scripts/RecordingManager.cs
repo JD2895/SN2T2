@@ -14,7 +14,7 @@ public class RecordingManager : MonoBehaviour
 
         controls.Recorder.Record.performed += _ => StartRecording(RecordingMode.Overwrite);
         controls.Recorder.Play.performed += _ => StartPlayback();
-        //controls.Recorder.AdditiveRecord.performed += _ => StartRecording(RecordingMode.Additive);
+        controls.Recorder.AdditiveRecord.performed += _ => StartRecording(RecordingMode.Additive);
     }
 
     private void OnEnable()

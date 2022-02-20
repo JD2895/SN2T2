@@ -10,6 +10,7 @@ public class ActionRecorder : MonoBehaviour
 
     bool isRecording = false;
     bool isPlaying = false;
+    bool isAdditive = false;
 
     Controls controls;
     MovementController movementController;
@@ -19,6 +20,7 @@ public class ActionRecorder : MonoBehaviour
     Vector3 startPosition;
     [SerializeField]
     List<ActionTime> recordedActions = new List<ActionTime>();
+    List<ActionTime> additiveActions = new List<ActionTime>();
 
     float playbackStartTime;
     Coroutine playbackRoutine;
@@ -34,10 +36,6 @@ public class ActionRecorder : MonoBehaviour
         controls.Movement.Down.canceled += _ => RecordMove(ActionType.DownEnd);
         controls.Movement.Jump.performed += _ => RecordMove(ActionType.JumpStart);
         controls.Movement.Jump.canceled += _ => RecordMove(ActionType.JumpEnd);
-
-        //controls.Recorder.Record.performed += _ => StartRecording(RecordingMode.Overwrite);
-        //controls.Recorder.Play.performed += _ => StartPlayback();
-        //controls.Recorder.AdditiveRecord.performed += _ => StartRecording(RecordingMode.Additive);
     }
 
     private void OnEnable()
@@ -55,24 +53,15 @@ public class ActionRecorder : MonoBehaviour
         startTime = Time.time;
         startPosition = recordedObject.transform.position;
         movementController = recordedObject.GetComponent<MovementController>();
-        //StartRecording();
     }
 
-    private void RecordMove(ActionType newAction)
-    {
-        if (isRecording)
-        {
-            recordedTime = Time.time - startTime;
-            recordedActions.Add(new ActionTime(newAction, recordedTime));
-        }
-    }
 
     #region Playback
     public void StartPlayback()
     {
-        Debug.Log("Starting Move Playback");
+        //Debug.Log("Starting Move Playback");
         //ChangeControlState(false);
-        isRecording = false;
+        //isRecording = isAdditive ? true :false;
         recordedObject.transform.position = startPosition;
         recordedObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 
@@ -83,7 +72,7 @@ public class ActionRecorder : MonoBehaviour
         }
         else
         {
-            Debug.Log("No moves to play");
+            Debug.Log(this.gameObject.name + ": No moves to play");
         }
 
     }
@@ -139,7 +128,7 @@ public class ActionRecorder : MonoBehaviour
     {
         if (isPlaying)
         {
-            Debug.Log("Stopping playback");
+            //Debug.Log("Stopping playback");
             this.StopCoroutine(playbackRoutine);
             isPlaying = false;
         }
@@ -149,11 +138,11 @@ public class ActionRecorder : MonoBehaviour
     #region Recording
     public void StartRecording(RecordingMode recordingMode)
     {
-        StopPlayback();
+        //StopPlayback();
 
         if (recordingMode == RecordingMode.Overwrite && recordingEnabled)
         {
-            ClearRecordedMoves(false);
+            ClearRecordedMoves();
         }
         //ChangeControlState(true);
 
@@ -170,19 +159,36 @@ public class ActionRecorder : MonoBehaviour
         }
         if (recordingMode == RecordingMode.Additive)
         {
+            ClearRecordedMoves(true);
             StartPlayback();
+            isAdditive = true;
         }
     }
 
-    private void ClearRecordedMoves(bool stopOtherActions = true)
+    private void RecordMove(ActionType newAction)
     {
-        Debug.Log("Clearing Recorded Moves");
-        if (stopOtherActions)
+        if (isRecording)
         {
-            StopRecording();
-            StopPlayback();
+            recordedTime = Time.time - startTime;
+            if (isAdditive)
+                additiveActions.Add(new ActionTime(newAction, recordedTime));
+            else
+                recordedActions.Add(new ActionTime(newAction, recordedTime));
         }
-        recordedActions.Clear();
+    }
+
+    private void ClearRecordedMoves(bool clearAdditive = false)
+    {
+        if (clearAdditive)
+        {
+            //Debug.Log("Clearing Recorded Moves");
+            additiveActions.Clear();
+        }
+        else
+        {
+            //Debug.Log("Clearing Recorded Moves");
+            recordedActions.Clear();
+        }
     }
 
     public void StopRecording()
@@ -191,9 +197,51 @@ public class ActionRecorder : MonoBehaviour
         {
             Debug.Log("Stopping Recording");
             isRecording = false;
+
+            if (isAdditive)
+            {
+                CombineRecordings();
+                isAdditive = false;
+            }
         }
     }
 
+    private void CombineRecordings()
+    {
+        int originalIndex = 0;
+        List<ActionTime> tempCombined = new List<ActionTime>();
+
+        int i = 0, j = 0;
+        bool done = false;
+
+        while (!done)
+        {
+            if (additiveActions[i].time < recordedActions[j].time)
+            {
+                tempCombined.Add(additiveActions[i]);
+                i++;
+            }
+            else if (recordedActions[j].time <= additiveActions[i].time)
+            {
+                tempCombined.Add(recordedActions[j]);
+                j++;
+            }
+
+            if (i == additiveActions.Count || j == recordedActions.Count)
+                done = true;
+        }
+
+        if (i < additiveActions.Count)
+        {
+            for (; i < additiveActions.Count; i++)
+                tempCombined.Add(additiveActions[i]);
+        }
+        else if (j < recordedActions.Count)
+        {
+            for (; j < recordedActions.Count; j++)
+                tempCombined.Add(recordedActions[j]);
+        }
+    }
     #endregion
 
     #region ActionTime definition
