@@ -241,6 +241,9 @@ public class ActionRecorder : MonoBehaviour
             for (; j < recordedActions.Count; j++)
                 tempCombined.Add(recordedActions[j]);
         }
+
+        recordedActions.Clear();
+        recordedActions = tempCombined;
     }
     #endregion
 
