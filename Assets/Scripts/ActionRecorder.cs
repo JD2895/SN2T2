@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System;
 using System.Text;
 using System.IO;
 using UnityEngine.SceneManagement;
@@ -31,7 +32,7 @@ public class ActionRecorder : MonoBehaviour
     float playbackStartTime;
     Coroutine playbackRoutine;
 
-    public TextAsset fileToLoad;
+    public UnityEngine.Object fileToLoad;
 
     private void Awake()
     {
@@ -61,6 +62,7 @@ public class ActionRecorder : MonoBehaviour
         startTime = Time.time;
         startPosition = recordedObject.transform.position;
         movementController = recordedObject.GetComponent<MovementController>();
+        LoadFromFile();
     }
 
 
@@ -216,7 +218,6 @@ public class ActionRecorder : MonoBehaviour
 
     private void CombineRecordings()
     {
-        int originalIndex = 0;
         List<ActionTime> tempCombined = new List<ActionTime>();
 
         int i = 0, j = 0;
@@ -255,43 +256,16 @@ public class ActionRecorder : MonoBehaviour
     }
     #endregion
 
-    #region ActionTime definition
-    struct ActionTime
-    {
-        public ActionTime(ActionType newAction, float newTime)
-        {
-            action = newAction;
-            time = newTime;
-        }
-
-        public ActionType action;
-        public float time;
-    }
-
-    private enum ActionType
-    {
-        // MOVEMENT actions
-        LeftStart,
-        LeftEnd,
-        RightStart,
-        RightEnd,
-        DownStart,
-        DownEnd,
-        JumpStart,
-        JumpEnd
-    }
-    #endregion
-
     #region file i/o
     public string ToCSV()
     {
-        var sb = new StringBuilder("ActionType,Time");
+        var sb = new StringBuilder();
         foreach(var ActionItem in recordedActions)
         {
-            sb.Append('\n');
             sb.Append(ActionItem.action.ToString());
             sb.Append(',');
             sb.Append(ActionItem.time.ToString());
+            sb.Append('\n');
         }
         return sb.ToString();
     }
@@ -326,12 +300,63 @@ public class ActionRecorder : MonoBehaviour
         AssetDatabase.Refresh();
 #endif
     }
-    #endregion
 
     public void LoadFromFile()
     {
-
+        string path = AssetDatabase.GetAssetPath(fileToLoad);
+        try
+        {
+            using (StreamReader sr = new StreamReader(path))
+            {
+                string line;
+                ActionType newAction;
+                float newActionTime;
+                recordedActions.Clear();
+                while ((line = sr.ReadLine()) != null)
+                {
+                    string[] splitString = line.Split(char.Parse(","));
+                    Debug.Log(splitString[0] + ":" + splitString[1]);
+                    newAction = (ActionType)System.Enum.Parse(typeof(ActionType), splitString[0]);
+                    newActionTime = float.Parse(splitString[1]);
+                    recordedActions.Add(new ActionTime(newAction, newActionTime));
+                }
+            }
+        }
+        catch (Exception e)
+        {
+            // Let the user know what went wrong.
+            Debug.Log(this.gameObject.name + ": The file could not be read:");
+            Debug.Log(e.Message);
+        }
     }
+    #endregion
+
+    #region ActionTime definition
+    struct ActionTime
+    {
+        public ActionTime(ActionType newAction, float newTime)
+        {
+            action = newAction;
+            time = newTime;
+        }
+
+        public ActionType action;
+        public float time;
+    }
+
+    private enum ActionType
+    {
+        // MOVEMENT actions
+        LeftStart,
+        LeftEnd,
+        RightStart,
+        RightEnd,
+        DownStart,
+        DownEnd,
+        JumpStart,
+        JumpEnd
+    }
+    #endregion
 }
 
 public enum RecordingMode
