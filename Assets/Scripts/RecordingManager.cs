@@ -15,6 +15,7 @@ public class RecordingManager : MonoBehaviour
         controls.Recorder.Record.performed += _ => StartRecording(RecordingMode.Overwrite);
         controls.Recorder.Play.performed += _ => StartPlayback();
         controls.Recorder.AdditiveRecord.performed += _ => StartRecording(RecordingMode.Additive);
+        controls.Recorder.SaveRecordings.performed += _ => SaveRecordings();
     }
 
     private void OnEnable()
@@ -70,6 +71,17 @@ public class RecordingManager : MonoBehaviour
 
                 cast[i].actor.GetComponent<MovementController>().Reset();
                 cast[i].actor.GetComponent<ActionRecorder>().StartPlayback();
+            }
+        }
+    }
+
+    public void SaveRecordings()
+    {
+        for (int i = 0; i < cast.Count; i++)
+        {
+            if (cast[i].actor != null)
+            {
+                cast[i].actor.GetComponent<ActionRecorder>().SaveToFile();
             }
         }
     }

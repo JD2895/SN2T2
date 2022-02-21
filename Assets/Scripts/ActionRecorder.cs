@@ -2,6 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Text;
+using System.IO;
+using UnityEngine.SceneManagement;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public class ActionRecorder : MonoBehaviour
 {
@@ -24,6 +30,8 @@ public class ActionRecorder : MonoBehaviour
 
     float playbackStartTime;
     Coroutine playbackRoutine;
+
+    public TextAsset fileToLoad;
 
     private void Awake()
     {
@@ -273,6 +281,57 @@ public class ActionRecorder : MonoBehaviour
         JumpEnd
     }
     #endregion
+
+    #region file i/o
+    public string ToCSV()
+    {
+        var sb = new StringBuilder("ActionType,Time");
+        foreach(var ActionItem in recordedActions)
+        {
+            sb.Append('\n');
+            sb.Append(ActionItem.action.ToString());
+            sb.Append(',');
+            sb.Append(ActionItem.time.ToString());
+        }
+        return sb.ToString();
+    }
+
+    public void SaveToFile()
+    {
+        if (recordedActions.Count <= 0)
+        {
+            Debug.Log("Nothing to save for: " + this.gameObject.name);
+            return;
+        }
+
+        var content = ToCSV();
+
+#if UNITY_EDITOR
+        var folder = Path.Combine(Application.streamingAssetsPath);
+        if (!Directory.Exists(folder)) 
+            Directory.CreateDirectory(folder);
+#else
+    var folder = Application.persistentDataPath;
+#endif
+        var filePath = Path.Combine(folder, SceneManager.GetActiveScene().name + "_" + this.gameObject.name + "_export.csv");
+
+        using(var writer = new StreamWriter(filePath, false))
+        {
+            writer.Write(content);
+        }
+
+        Debug.Log($"CSV file written to \"{filePath}\"");
+
+#if UNITY_EDITOR
+        AssetDatabase.Refresh();
+#endif
+    }
+    #endregion
+
+    public void LoadFromFile()
+    {
+
+    }
 }
 
 public enum RecordingMode
