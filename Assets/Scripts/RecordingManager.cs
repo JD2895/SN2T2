@@ -16,6 +16,7 @@ public class RecordingManager : MonoBehaviour
         controls.Recorder.Play.performed += _ => StartPlayback();
         controls.Recorder.AdditiveRecord.performed += _ => StartRecording(RecordingMode.Additive);
         controls.Recorder.SaveRecordings.performed += _ => SaveRecordings();
+        controls.Recorder.Stop.performed += _ => Stop();
     }
 
     private void OnEnable()
@@ -81,7 +82,18 @@ public class RecordingManager : MonoBehaviour
         {
             if (cast[i].actor != null)
             {
-                cast[i].actor.GetComponent<ActionRecorder>().SaveToFile();
+                cast[i].actor.GetComponent<ActionRecorder>().Stop();
+            }
+        }
+    }
+
+    public void Stop()
+    {
+        for (int i = 0; i < cast.Count; i++)
+        {
+            if (cast[i].actor != null)
+            {
+                //cast[i].actor.GetComponent<ActionRecorder>().SaveToFile();
             }
         }
     }

@@ -331,6 +331,14 @@ public class ActionRecorder : MonoBehaviour
     }
     #endregion
 
+    #region Stop
+    public void Stop()
+    {
+        StopPlayback();
+        StopRecording();
+    }
+    #endregion
+
     #region ActionTime definition
     struct ActionTime
     {
