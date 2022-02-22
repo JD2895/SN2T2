@@ -315,10 +315,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recordingManager: {fileID: 1000058159}
   recordButton: {fileID: 1589391423}
-  playButton: {fileID: 0}
-  additiveButton: {fileID: 0}
-  saveButton: {fileID: 0}
-  stopButton: {fileID: 0}
+  playButton: {fileID: 1044704948}
+  additiveButton: {fileID: 888342382}
+  saveButton: {fileID: 828596047}
+  stopButton: {fileID: 823036063}
 --- !u!1 &140742092
 GameObject:
   m_ObjectHideFlags: 0

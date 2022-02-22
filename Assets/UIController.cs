@@ -19,12 +19,10 @@ public class UIController : MonoBehaviour
     void Awake()
     {
         recordButton.GetComponent<Button>().onClick.AddListener(() => recordingManager.StartRecording(RecordingMode.Overwrite));
-    }
-
-    public void temp(RecordingMode r_mode)
-    {
-        recordingManager.StartRecording(r_mode);
-        return;
+        playButton.GetComponent<Button>().onClick.AddListener(() => recordingManager.StartPlayback());
+        additiveButton.GetComponent<Button>().onClick.AddListener(() => recordingManager.StartRecording(RecordingMode.Additive));
+        saveButton.GetComponent<Button>().onClick.AddListener(() => recordingManager.SaveRecordings());
+        stopButton.GetComponent<Button>().onClick.AddListener(() => recordingManager.Stop());
     }
 
     // Update is called once per frame

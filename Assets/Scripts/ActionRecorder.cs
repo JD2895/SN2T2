@@ -315,7 +315,6 @@ public class ActionRecorder : MonoBehaviour
                 while ((line = sr.ReadLine()) != null)
                 {
                     string[] splitString = line.Split(char.Parse(","));
-                    Debug.Log(splitString[0] + ":" + splitString[1]);
                     newAction = (ActionType)System.Enum.Parse(typeof(ActionType), splitString[0]);
                     newActionTime = float.Parse(splitString[1]);
                     recordedActions.Add(new ActionTime(newAction, newActionTime));
