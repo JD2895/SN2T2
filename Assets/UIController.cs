@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.InputSystem.UI;
+//using UnityEngine.InputSystem.UI;
 
 public class UIController : MonoBehaviour
 {
@@ -18,7 +18,7 @@ public class UIController : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        recordButton.GetComponent<
+        recordButton.GetComponent<Button>().onClick.AddListener(() => recordingManager.StartRecording(RecordingMode.Overwrite));
     }
 
     public void temp(RecordingMode r_mode)

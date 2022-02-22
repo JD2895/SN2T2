@@ -313,8 +313,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53568603a4c56e9489e420d7c4e3f9e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recordingManager: {fileID: 0}
-  recordButton: {fileID: 0}
+  recordingManager: {fileID: 1000058159}
+  recordButton: {fileID: 1589391423}
   playButton: {fileID: 0}
   additiveButton: {fileID: 0}
   saveButton: {fileID: 0}
