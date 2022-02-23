@@ -43,6 +43,11 @@ public class RecordingManager : MonoBehaviour
         }
     }
 
+    public void SetControlIndex(int i)
+    {
+        cast[i].actor.GetComponent<MovementController>().SetControllable(cast[i].movementEnabled);
+    }
+
     public void StartRecording(RecordingMode recordingMode)
     {
         for (int i = 0; i < cast.Count; i++)
@@ -82,7 +87,7 @@ public class RecordingManager : MonoBehaviour
         {
             if (cast[i].actor != null)
             {
-                cast[i].actor.GetComponent<ActionRecorder>().Stop();
+                cast[i].actor.GetComponent<ActionRecorder>().SaveToFile();
             }
         }
     }
@@ -93,7 +98,7 @@ public class RecordingManager : MonoBehaviour
         {
             if (cast[i].actor != null)
             {
-                //cast[i].actor.GetComponent<ActionRecorder>().SaveToFile();
+                cast[i].actor.GetComponent<ActionRecorder>().Stop();
             }
         }
     }
