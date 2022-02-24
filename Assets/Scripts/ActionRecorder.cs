@@ -26,7 +26,8 @@ public class ActionRecorder : MonoBehaviour
     float recordedTime;
     Vector3 startPosition;
     [SerializeField]
-    List<ActionTime> recordedActions = new List<ActionTime>();
+    List<ActionTime> currentActions = new List<ActionTime>();
+    List<ActionTime> savedActions = new List<ActionTime>();
     List<ActionTime> additiveActions = new List<ActionTime>();
 
     float playbackStartTime;
@@ -62,7 +63,7 @@ public class ActionRecorder : MonoBehaviour
         startTime = Time.time;
         startPosition = recordedObject.transform.position;
         movementController = recordedObject.GetComponent<MovementController>();
-        LoadFromFile();
+        ReadFromFile();
     }
 
 
@@ -75,7 +76,7 @@ public class ActionRecorder : MonoBehaviour
         recordedObject.transform.position = startPosition;
         recordedObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 
-        if (recordedActions.Count > 0)
+        if (savedActions.Count > 0)
         {
             isPlaying = true;
             playbackRoutine = StartCoroutine(PlayingMoves());
@@ -91,7 +92,7 @@ public class ActionRecorder : MonoBehaviour
     {
         playbackStartTime = Time.time;
 
-        foreach (ActionTime nextMove in recordedActions)
+        foreach (ActionTime nextMove in savedActions)
         {
             while (isPlaying)
             {
@@ -166,6 +167,7 @@ public class ActionRecorder : MonoBehaviour
         if ((recordingMode == RecordingMode.Overwrite || recordingMode == RecordingMode.Additive) && recordingEnabled )
         {
             isRecording = true;
+            isAdditive = false;
         }
         if (recordingMode == RecordingMode.Additive)
         {
@@ -183,7 +185,7 @@ public class ActionRecorder : MonoBehaviour
             if (isAdditive)
                 additiveActions.Add(new ActionTime(newAction, recordedTime));
             else
-                recordedActions.Add(new ActionTime(newAction, recordedTime));
+                currentActions.Add(new ActionTime(newAction, recordedTime));
         }
     }
 
@@ -197,11 +199,11 @@ public class ActionRecorder : MonoBehaviour
         else
         {
             //Debug.Log("Clearing Recorded Moves");
-            recordedActions.Clear();
+            currentActions.Clear();
         }
     }
 
-    public void StopRecording()
+    public void SaveInProgressRecording()
     {
         if (isRecording)
         {
@@ -210,7 +212,30 @@ public class ActionRecorder : MonoBehaviour
 
             if (isAdditive)
             {
-                CombineRecordings();
+                if (savedActions.Count == 0)
+                {
+                    savedActions = additiveActions;
+                }
+                else if (additiveActions.Count > 0)
+                    CombineRecordings();
+                isAdditive = false;
+            }
+            else
+            {
+                savedActions = currentActions;
+            }
+        }
+    }
+
+    public void CancelInProgressRecording()
+    {
+        Debug.Log("Canelling Recording");
+        if (isRecording)
+        {
+            isRecording = false;
+
+            if (isAdditive)
+            {
                 isAdditive = false;
             }
         }
@@ -218,6 +243,7 @@ public class ActionRecorder : MonoBehaviour
 
     private void CombineRecordings()
     {
+        Debug.Log("Combining Recordings");
         List<ActionTime> tempCombined = new List<ActionTime>();
 
         int i = 0, j = 0;
@@ -225,18 +251,18 @@ public class ActionRecorder : MonoBehaviour
 
         while (!done)
         {
-            if (additiveActions[i].time < recordedActions[j].time)
+            if (additiveActions[i].time < savedActions[j].time)
             {
                 tempCombined.Add(additiveActions[i]);
                 i++;
             }
-            else if (recordedActions[j].time <= additiveActions[i].time)
+            else if (savedActions[j].time <= additiveActions[i].time)
             {
-                tempCombined.Add(recordedActions[j]);
+                tempCombined.Add(savedActions[j]);
                 j++;
             }
 
-            if (i == additiveActions.Count || j == recordedActions.Count)
+            if (i == additiveActions.Count || j == savedActions.Count)
                 done = true;
         }
 
@@ -245,14 +271,13 @@ public class ActionRecorder : MonoBehaviour
             for (; i < additiveActions.Count; i++)
                 tempCombined.Add(additiveActions[i]);
         }
-        else if (j < recordedActions.Count)
+        else if (j < savedActions.Count)
         {
-            for (; j < recordedActions.Count; j++)
-                tempCombined.Add(recordedActions[j]);
+            for (; j < savedActions.Count; j++)
+                tempCombined.Add(savedActions[j]);
         }
 
-        recordedActions.Clear();
-        recordedActions = tempCombined;
+        savedActions = tempCombined;
     }
     #endregion
 
@@ -260,7 +285,7 @@ public class ActionRecorder : MonoBehaviour
     public string ToCSV()
     {
         var sb = new StringBuilder();
-        foreach(var ActionItem in recordedActions)
+        foreach(var ActionItem in savedActions)
         {
             sb.Append(ActionItem.action.ToString());
             sb.Append(',');
@@ -270,9 +295,9 @@ public class ActionRecorder : MonoBehaviour
         return sb.ToString();
     }
 
-    public void SaveToFile()
+    public void WriteToFile()
     {
-        if (recordedActions.Count <= 0)
+        if (savedActions.Count <= 0)
         {
             Debug.Log("Nothing to save for: " + this.gameObject.name);
             return;
@@ -287,7 +312,7 @@ public class ActionRecorder : MonoBehaviour
 #else
     var folder = Application.persistentDataPath;
 #endif
-        var filePath = Path.Combine(folder, SceneManager.GetActiveScene().name + "_" + this.gameObject.name + "_export.csv");
+        var filePath = Path.Combine(folder, SceneManager.GetActiveScene().name + "_" + this.gameObject.name + ".csv");
 
         using(var writer = new StreamWriter(filePath, false))
         {
@@ -301,7 +326,7 @@ public class ActionRecorder : MonoBehaviour
 #endif
     }
 
-    public void LoadFromFile()
+    public void ReadFromFile()
     {
         string path = AssetDatabase.GetAssetPath(fileToLoad);
         try
@@ -311,13 +336,13 @@ public class ActionRecorder : MonoBehaviour
                 string line;
                 ActionType newAction;
                 float newActionTime;
-                recordedActions.Clear();
+                savedActions.Clear();
                 while ((line = sr.ReadLine()) != null)
                 {
                     string[] splitString = line.Split(char.Parse(","));
                     newAction = (ActionType)System.Enum.Parse(typeof(ActionType), splitString[0]);
                     newActionTime = float.Parse(splitString[1]);
-                    recordedActions.Add(new ActionTime(newAction, newActionTime));
+                    savedActions.Add(new ActionTime(newAction, newActionTime));
                 }
             }
         }
@@ -334,7 +359,7 @@ public class ActionRecorder : MonoBehaviour
     public void Stop()
     {
         StopPlayback();
-        StopRecording();
+        SaveInProgressRecording();
     }
     #endregion
 

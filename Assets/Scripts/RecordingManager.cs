@@ -6,6 +6,7 @@ using System;
 public class RecordingManager : MonoBehaviour
 {
     public List<ActorItem> cast;
+    /*
     Controls controls;
 
     private void Awake()
@@ -17,6 +18,7 @@ public class RecordingManager : MonoBehaviour
         controls.Recorder.AdditiveRecord.performed += _ => StartRecording(RecordingMode.Additive);
         controls.Recorder.SaveRecordings.performed += _ => SaveRecordings();
         controls.Recorder.Stop.performed += _ => Stop();
+        controls.Recorder.CancelRecording.performed += _ => Cancel();
     }
 
     private void OnEnable()
@@ -28,6 +30,7 @@ public class RecordingManager : MonoBehaviour
     {
         controls.Disable();
     }
+    */
 
     private void Start()
     {
@@ -54,7 +57,7 @@ public class RecordingManager : MonoBehaviour
         {
             if (cast[i].actor != null)
             {
-                cast[i].actor.GetComponent<ActionRecorder>().StopRecording();
+                cast[i].actor.GetComponent<ActionRecorder>().SaveInProgressRecording();
                 cast[i].actor.GetComponent<ActionRecorder>().StopPlayback();
                 cast[i].actor.GetComponent<MovementController>().Reset();
 
@@ -72,7 +75,7 @@ public class RecordingManager : MonoBehaviour
         {
             if (cast[i].actor != null)
             {
-                cast[i].actor.GetComponent<ActionRecorder>().StopRecording();
+                cast[i].actor.GetComponent<ActionRecorder>().SaveInProgressRecording();
                 cast[i].actor.GetComponent<ActionRecorder>().StopPlayback();
 
                 cast[i].actor.GetComponent<MovementController>().Reset();
@@ -87,7 +90,7 @@ public class RecordingManager : MonoBehaviour
         {
             if (cast[i].actor != null)
             {
-                cast[i].actor.GetComponent<ActionRecorder>().SaveToFile();
+                cast[i].actor.GetComponent<ActionRecorder>().WriteToFile();
             }
         }
     }
@@ -99,6 +102,18 @@ public class RecordingManager : MonoBehaviour
             if (cast[i].actor != null)
             {
                 cast[i].actor.GetComponent<ActionRecorder>().Stop();
+                cast[i].actor.GetComponent<MovementController>().Reset();
+            }
+        }
+    }
+
+    public void Cancel()
+    {
+        for (int i = 0; i < cast.Count; i++)
+        {
+            if (cast[i].actor != null && cast[i].recordingEnabled)
+            {
+                cast[i].actor.GetComponent<ActionRecorder>().CancelInProgressRecording();
             }
         }
     }

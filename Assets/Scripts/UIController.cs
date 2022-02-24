@@ -9,31 +9,56 @@ public class UIController : MonoBehaviour
     public RecordingManager recordingManager;
 
     [Header("Right Panel")]
+    public Button cancelButton;
     public Button recordButton;
     public Button playButton;
     public Button additiveButton;
     public Button saveButton;
     public Button stopButton;
+    public Text statusField;
 
     [Header("Left Panel")]
     public Toggle recordToggle;
     public Toggle movementToggle;
     public Toggle specialToggle;
-    
     public Transform castToggleListContainer;
     public GameObject castTogglePrefab;
 
-    private Dictionary<Toggle, ActorItem> toggleReference = new Dictionary<Toggle, ActorItem>();
+    Dictionary<Toggle, ActorItem> toggleReference = new Dictionary<Toggle, ActorItem>();
+    Controls controls;
+
+    private void Awake()
+    {
+        controls = new Controls();
+
+        controls.Recorder.Record.performed += _ => RecordPressed();
+        controls.Recorder.Play.performed += _ => PlayPressed();
+        controls.Recorder.AdditiveRecord.performed += _ => AdditivePressed();
+        controls.Recorder.SaveRecordings.performed += _ => SavePressed();
+        controls.Recorder.Stop.performed += _ => StopPressed();
+        controls.Recorder.CancelRecording.performed += _ => CancelPressed();
+    }
+
+    private void OnEnable()
+    {
+        controls.Enable();
+    }
+
+    private void OnDisable()
+    {
+        controls.Disable();
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        recordButton.onClick.AddListener(() => recordingManager.StartRecording(RecordingMode.Overwrite));
-        playButton.onClick.AddListener(() => recordingManager.StartPlayback());
-        additiveButton.onClick.AddListener(() => recordingManager.StartRecording(RecordingMode.Additive));
-        saveButton.onClick.AddListener(() => recordingManager.SaveRecordings());
-        stopButton.onClick.AddListener(() => recordingManager.Stop());
-
+        recordButton.onClick.AddListener(() => RecordPressed());
+        playButton.onClick.AddListener(() => PlayPressed());
+        additiveButton.onClick.AddListener(() => AdditivePressed());
+        saveButton.onClick.AddListener(() => SavePressed());
+        stopButton.onClick.AddListener(() => StopPressed());
+        cancelButton.onClick.AddListener(() => CancelPressed());
+        
         recordToggle.onValueChanged.AddListener(delegate { RecordToggled(); });
         movementToggle.onValueChanged.AddListener(delegate { MovementToggled(); });
         specialToggle.onValueChanged.AddListener(delegate { SpecialToggled(); });
@@ -49,6 +74,42 @@ public class UIController : MonoBehaviour
             });
             toggleReference.Add(newToggleObject.GetComponent<Toggle>(), castmember);
         }
+    }
+
+    void RecordPressed()
+    {
+        recordingManager.StartRecording(RecordingMode.Overwrite);
+        statusField.text = "Recording";
+    }
+
+    void PlayPressed()
+    {
+        recordingManager.StartPlayback();
+        statusField.text = "Playing";
+    }
+
+    void AdditivePressed()
+    {
+        recordingManager.StartRecording(RecordingMode.Additive);
+        statusField.text = "Adding";
+    }
+
+    void SavePressed()
+    {
+        recordingManager.SaveRecordings();
+        statusField.text = "Saved";
+    }
+
+    void StopPressed()
+    {
+        recordingManager.Stop();
+        statusField.text = "Stopped";
+    }
+
+    void CancelPressed()
+    {
+        recordingManager.Cancel();
+        statusField.text = "Cancelled";
     }
 
     void RecordToggled()

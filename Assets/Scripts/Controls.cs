@@ -159,6 +159,15 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""CancelRecording"",
+                    ""type"": ""Button"",
+                    ""id"": ""9c48f399-e9de-44e7-9ea9-f47bf8f1ef7e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -216,6 +225,17 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""action"": ""Stop"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c6443edf-5f47-40b4-9f2f-114dfd3848c8"",
+                    ""path"": ""<Keyboard>/backquote"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CancelRecording"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -235,6 +255,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         m_Recorder_AdditiveRecord = m_Recorder.FindAction("AdditiveRecord", throwIfNotFound: true);
         m_Recorder_SaveRecordings = m_Recorder.FindAction("SaveRecordings", throwIfNotFound: true);
         m_Recorder_Stop = m_Recorder.FindAction("Stop", throwIfNotFound: true);
+        m_Recorder_CancelRecording = m_Recorder.FindAction("CancelRecording", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -356,6 +377,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Recorder_AdditiveRecord;
     private readonly InputAction m_Recorder_SaveRecordings;
     private readonly InputAction m_Recorder_Stop;
+    private readonly InputAction m_Recorder_CancelRecording;
     public struct RecorderActions
     {
         private @Controls m_Wrapper;
@@ -365,6 +387,7 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         public InputAction @AdditiveRecord => m_Wrapper.m_Recorder_AdditiveRecord;
         public InputAction @SaveRecordings => m_Wrapper.m_Recorder_SaveRecordings;
         public InputAction @Stop => m_Wrapper.m_Recorder_Stop;
+        public InputAction @CancelRecording => m_Wrapper.m_Recorder_CancelRecording;
         public InputActionMap Get() { return m_Wrapper.m_Recorder; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -389,6 +412,9 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @Stop.started -= m_Wrapper.m_RecorderActionsCallbackInterface.OnStop;
                 @Stop.performed -= m_Wrapper.m_RecorderActionsCallbackInterface.OnStop;
                 @Stop.canceled -= m_Wrapper.m_RecorderActionsCallbackInterface.OnStop;
+                @CancelRecording.started -= m_Wrapper.m_RecorderActionsCallbackInterface.OnCancelRecording;
+                @CancelRecording.performed -= m_Wrapper.m_RecorderActionsCallbackInterface.OnCancelRecording;
+                @CancelRecording.canceled -= m_Wrapper.m_RecorderActionsCallbackInterface.OnCancelRecording;
             }
             m_Wrapper.m_RecorderActionsCallbackInterface = instance;
             if (instance != null)
@@ -408,6 +434,9 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @Stop.started += instance.OnStop;
                 @Stop.performed += instance.OnStop;
                 @Stop.canceled += instance.OnStop;
+                @CancelRecording.started += instance.OnCancelRecording;
+                @CancelRecording.performed += instance.OnCancelRecording;
+                @CancelRecording.canceled += instance.OnCancelRecording;
             }
         }
     }
@@ -426,5 +455,6 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         void OnAdditiveRecord(InputAction.CallbackContext context);
         void OnSaveRecordings(InputAction.CallbackContext context);
         void OnStop(InputAction.CallbackContext context);
+        void OnCancelRecording(InputAction.CallbackContext context);
     }
 }
