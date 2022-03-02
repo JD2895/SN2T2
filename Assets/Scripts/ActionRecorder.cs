@@ -66,7 +66,6 @@ public class ActionRecorder : MonoBehaviour
         ReadFromFile();
     }
 
-
     #region Playback
     public void StartPlayback()
     {

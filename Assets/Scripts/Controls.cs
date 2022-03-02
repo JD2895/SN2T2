@@ -238,6 +238,434 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Special"",
+            ""id"": ""41a14c47-a5d8-4736-81b9-06c7976c1f8b"",
+            ""actions"": [
+                {
+                    ""name"": ""Q"",
+                    ""type"": ""Button"",
+                    ""id"": ""1d75aa7c-5dab-452d-bd72-69cd0b2aa90e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""W"",
+                    ""type"": ""Button"",
+                    ""id"": ""5fb3b605-8734-49ba-abba-32f188265d05"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""E"",
+                    ""type"": ""Button"",
+                    ""id"": ""81090695-25c5-4f98-b695-170f6e39280e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""R"",
+                    ""type"": ""Button"",
+                    ""id"": ""4ab052d3-1771-4758-953b-795ae74e4e47"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""T"",
+                    ""type"": ""Button"",
+                    ""id"": ""51899562-41b5-4fb3-9daf-77de9839b179"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Y"",
+                    ""type"": ""Button"",
+                    ""id"": ""20013ac6-38e3-4521-bef2-6c14e4f7908f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""U"",
+                    ""type"": ""Button"",
+                    ""id"": ""51cc2d38-5826-4fea-8598-9c10acfcc643"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""A"",
+                    ""type"": ""Button"",
+                    ""id"": ""b3b8fcae-b961-4d5d-aa97-4602ba5f6e26"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""S"",
+                    ""type"": ""Button"",
+                    ""id"": ""c5b5d2a8-ed55-411a-baa1-a168a565162b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""D"",
+                    ""type"": ""Button"",
+                    ""id"": ""0dae0a1f-6b57-43a0-94eb-161f50ab1e46"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""F"",
+                    ""type"": ""Button"",
+                    ""id"": ""4be49eaa-252f-4e55-a952-fb0fca5cb839"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""G"",
+                    ""type"": ""Button"",
+                    ""id"": ""a7606f29-312b-4aff-99d9-8cb957e9f016"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""H"",
+                    ""type"": ""Button"",
+                    ""id"": ""bfbec4d8-44aa-4a91-af6e-6e42808e8191"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""J"",
+                    ""type"": ""Button"",
+                    ""id"": ""d661b53e-0399-4860-924a-df98cc587aea"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Z"",
+                    ""type"": ""Button"",
+                    ""id"": ""39dd938f-c74b-47de-b481-e23c82549505"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""X"",
+                    ""type"": ""Button"",
+                    ""id"": ""a604350b-e856-4ddc-a6f1-8d884ed657af"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""C"",
+                    ""type"": ""Button"",
+                    ""id"": ""d8b8bffd-6385-4137-b5fe-d8c134f0fa56"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""V"",
+                    ""type"": ""Button"",
+                    ""id"": ""6d01edd7-d6cf-4a90-beca-de17412489dc"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""B"",
+                    ""type"": ""Button"",
+                    ""id"": ""89d88413-d52e-4c29-8ac1-223a97538ed6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""N"",
+                    ""type"": ""Button"",
+                    ""id"": ""8a6aa397-6457-435f-b615-1c49cfe26195"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""M"",
+                    ""type"": ""Button"",
+                    ""id"": ""387e0134-3017-417b-b81b-8b87964e0185"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""eab4990f-750b-4ed5-82d4-af01d8140c44"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Q"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9215574e-79a2-427f-920f-386707958810"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""W"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1afeae94-a2a6-47f6-aef8-192507374afa"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""E"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c2a3c6e2-bc24-49d9-b14b-172f0cf482d3"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""R"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b7254f2f-dcff-49cc-be02-f7093b096009"",
+                    ""path"": ""<Keyboard>/t"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""T"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0a68a147-7b55-4b03-a378-ad24c844caf4"",
+                    ""path"": ""<Keyboard>/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Y"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""91128aa4-7e16-4ceb-b170-9e7af08dbc85"",
+                    ""path"": ""<Keyboard>/u"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""U"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""07df69b2-861d-44b8-90e7-9326d8d7d649"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""A"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""532ef56b-0d75-43ca-be69-c9ee05f5299d"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""S"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0a7a7de0-f54f-43fd-ba53-750b50f3c0da"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""D"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9fb647b7-f00f-4b62-876f-05089046530a"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""F"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""18b73407-9746-4d0e-8a89-3045cee702b8"",
+                    ""path"": ""<Keyboard>/g"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""G"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e5d5f7b4-4474-433c-9f89-e50690ec2a16"",
+                    ""path"": ""<Keyboard>/h"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""H"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ce12fdda-caac-4c69-b427-169fd2f68bb8"",
+                    ""path"": ""<Keyboard>/j"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""J"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e0f096e2-1df6-4f6a-8f46-7919176ed409"",
+                    ""path"": ""<Keyboard>/z"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Z"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8f408e11-5d2a-495e-8bf2-97144ef8b997"",
+                    ""path"": ""<Keyboard>/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""X"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5f10f3d0-2f64-4b3b-991e-315b4db90423"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""C"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c2821369-6197-45bd-bb07-47a4152501a0"",
+                    ""path"": ""<Keyboard>/v"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""V"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""466493f2-5a21-4a5b-a463-3a34c9c6d670"",
+                    ""path"": ""<Keyboard>/b"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""B"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c579b3e0-5724-4171-bc60-3b0dfa1a80bf"",
+                    ""path"": ""<Keyboard>/n"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""N"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""648dcf60-2c1e-4a3f-924b-fb4f6a844044"",
+                    ""path"": ""<Keyboard>/m"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""M"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -256,6 +684,29 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         m_Recorder_SaveRecordings = m_Recorder.FindAction("SaveRecordings", throwIfNotFound: true);
         m_Recorder_Stop = m_Recorder.FindAction("Stop", throwIfNotFound: true);
         m_Recorder_CancelRecording = m_Recorder.FindAction("CancelRecording", throwIfNotFound: true);
+        // Special
+        m_Special = asset.FindActionMap("Special", throwIfNotFound: true);
+        m_Special_Q = m_Special.FindAction("Q", throwIfNotFound: true);
+        m_Special_W = m_Special.FindAction("W", throwIfNotFound: true);
+        m_Special_E = m_Special.FindAction("E", throwIfNotFound: true);
+        m_Special_R = m_Special.FindAction("R", throwIfNotFound: true);
+        m_Special_T = m_Special.FindAction("T", throwIfNotFound: true);
+        m_Special_Y = m_Special.FindAction("Y", throwIfNotFound: true);
+        m_Special_U = m_Special.FindAction("U", throwIfNotFound: true);
+        m_Special_A = m_Special.FindAction("A", throwIfNotFound: true);
+        m_Special_S = m_Special.FindAction("S", throwIfNotFound: true);
+        m_Special_D = m_Special.FindAction("D", throwIfNotFound: true);
+        m_Special_F = m_Special.FindAction("F", throwIfNotFound: true);
+        m_Special_G = m_Special.FindAction("G", throwIfNotFound: true);
+        m_Special_H = m_Special.FindAction("H", throwIfNotFound: true);
+        m_Special_J = m_Special.FindAction("J", throwIfNotFound: true);
+        m_Special_Z = m_Special.FindAction("Z", throwIfNotFound: true);
+        m_Special_X = m_Special.FindAction("X", throwIfNotFound: true);
+        m_Special_C = m_Special.FindAction("C", throwIfNotFound: true);
+        m_Special_V = m_Special.FindAction("V", throwIfNotFound: true);
+        m_Special_B = m_Special.FindAction("B", throwIfNotFound: true);
+        m_Special_N = m_Special.FindAction("N", throwIfNotFound: true);
+        m_Special_M = m_Special.FindAction("M", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -441,6 +892,199 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         }
     }
     public RecorderActions @Recorder => new RecorderActions(this);
+
+    // Special
+    private readonly InputActionMap m_Special;
+    private ISpecialActions m_SpecialActionsCallbackInterface;
+    private readonly InputAction m_Special_Q;
+    private readonly InputAction m_Special_W;
+    private readonly InputAction m_Special_E;
+    private readonly InputAction m_Special_R;
+    private readonly InputAction m_Special_T;
+    private readonly InputAction m_Special_Y;
+    private readonly InputAction m_Special_U;
+    private readonly InputAction m_Special_A;
+    private readonly InputAction m_Special_S;
+    private readonly InputAction m_Special_D;
+    private readonly InputAction m_Special_F;
+    private readonly InputAction m_Special_G;
+    private readonly InputAction m_Special_H;
+    private readonly InputAction m_Special_J;
+    private readonly InputAction m_Special_Z;
+    private readonly InputAction m_Special_X;
+    private readonly InputAction m_Special_C;
+    private readonly InputAction m_Special_V;
+    private readonly InputAction m_Special_B;
+    private readonly InputAction m_Special_N;
+    private readonly InputAction m_Special_M;
+    public struct SpecialActions
+    {
+        private @Controls m_Wrapper;
+        public SpecialActions(@Controls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Q => m_Wrapper.m_Special_Q;
+        public InputAction @W => m_Wrapper.m_Special_W;
+        public InputAction @E => m_Wrapper.m_Special_E;
+        public InputAction @R => m_Wrapper.m_Special_R;
+        public InputAction @T => m_Wrapper.m_Special_T;
+        public InputAction @Y => m_Wrapper.m_Special_Y;
+        public InputAction @U => m_Wrapper.m_Special_U;
+        public InputAction @A => m_Wrapper.m_Special_A;
+        public InputAction @S => m_Wrapper.m_Special_S;
+        public InputAction @D => m_Wrapper.m_Special_D;
+        public InputAction @F => m_Wrapper.m_Special_F;
+        public InputAction @G => m_Wrapper.m_Special_G;
+        public InputAction @H => m_Wrapper.m_Special_H;
+        public InputAction @J => m_Wrapper.m_Special_J;
+        public InputAction @Z => m_Wrapper.m_Special_Z;
+        public InputAction @X => m_Wrapper.m_Special_X;
+        public InputAction @C => m_Wrapper.m_Special_C;
+        public InputAction @V => m_Wrapper.m_Special_V;
+        public InputAction @B => m_Wrapper.m_Special_B;
+        public InputAction @N => m_Wrapper.m_Special_N;
+        public InputAction @M => m_Wrapper.m_Special_M;
+        public InputActionMap Get() { return m_Wrapper.m_Special; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(SpecialActions set) { return set.Get(); }
+        public void SetCallbacks(ISpecialActions instance)
+        {
+            if (m_Wrapper.m_SpecialActionsCallbackInterface != null)
+            {
+                @Q.started -= m_Wrapper.m_SpecialActionsCallbackInterface.OnQ;
+                @Q.performed -= m_Wrapper.m_SpecialActionsCallbackInterface.OnQ;
+                @Q.canceled -= m_Wrapper.m_SpecialActionsCallbackInterface.OnQ;
+                @W.started -= m_Wrapper.m_SpecialActionsCallbackInterface.OnW;
+                @W.performed -= m_Wrapper.m_SpecialActionsCallbackInterface.OnW;
+                @W.canceled -= m_Wrapper.m_SpecialActionsCallbackInterface.OnW;
+                @E.started -= m_Wrapper.m_SpecialActionsCallbackInterface.OnE;
+                @E.performed -= m_Wrapper.m_SpecialActionsCallbackInterface.OnE;
+                @E.canceled -= m_Wrapper.m_SpecialActionsCallbackInterface.OnE;
+                @R.started -= m_Wrapper.m_SpecialActionsCallbackInterface.OnR;
+                @R.performed -= m_Wrapper.m_SpecialActionsCallbackInterface.OnR;
+                @R.canceled -= m_Wrapper.m_SpecialActionsCallbackInterface.OnR;
+                @T.started -= m_Wrapper.m_SpecialActionsCallbackInterface.OnT;
+                @T.performed -= m_Wrapper.m_SpecialActionsCallbackInterface.OnT;
+                @T.canceled -= m_Wrapper.m_SpecialActionsCallbackInterface.OnT;
+                @Y.started -= m_Wrapper.m_SpecialActionsCallbackInterface.OnY;
+                @Y.performed -= m_Wrapper.m_SpecialActionsCallbackInterface.OnY;
+                @Y.canceled -= m_Wrapper.m_SpecialActionsCallbackInterface.OnY;
+                @U.started -= m_Wrapper.m_SpecialActionsCallbackInterface.OnU;
+                @U.performed -= m_Wrapper.m_SpecialActionsCallbackInterface.OnU;
+                @U.canceled -= m_Wrapper.m_SpecialActionsCallbackInterface.OnU;
+                @A.started -= m_Wrapper.m_SpecialActionsCallbackInterface.OnA;
+                @A.performed -= m_Wrapper.m_SpecialActionsCallbackInterface.OnA;
+                @A.canceled -= m_Wrapper.m_SpecialActionsCallbackInterface.OnA;
+                @S.started -= m_Wrapper.m_SpecialActionsCallbackInterface.OnS;
+                @S.performed -= m_Wrapper.m_SpecialActionsCallbackInterface.OnS;
+                @S.canceled -= m_Wrapper.m_SpecialActionsCallbackInterface.OnS;
+                @D.started -= m_Wrapper.m_SpecialActionsCallbackInterface.OnD;
+                @D.performed -= m_Wrapper.m_SpecialActionsCallbackInterface.OnD;
+                @D.canceled -= m_Wrapper.m_SpecialActionsCallbackInterface.OnD;
+                @F.started -= m_Wrapper.m_SpecialActionsCallbackInterface.OnF;
+                @F.performed -= m_Wrapper.m_SpecialActionsCallbackInterface.OnF;
+                @F.canceled -= m_Wrapper.m_SpecialActionsCallbackInterface.OnF;
+                @G.started -= m_Wrapper.m_SpecialActionsCallbackInterface.OnG;
+                @G.performed -= m_Wrapper.m_SpecialActionsCallbackInterface.OnG;
+                @G.canceled -= m_Wrapper.m_SpecialActionsCallbackInterface.OnG;
+                @H.started -= m_Wrapper.m_SpecialActionsCallbackInterface.OnH;
+                @H.performed -= m_Wrapper.m_SpecialActionsCallbackInterface.OnH;
+                @H.canceled -= m_Wrapper.m_SpecialActionsCallbackInterface.OnH;
+                @J.started -= m_Wrapper.m_SpecialActionsCallbackInterface.OnJ;
+                @J.performed -= m_Wrapper.m_SpecialActionsCallbackInterface.OnJ;
+                @J.canceled -= m_Wrapper.m_SpecialActionsCallbackInterface.OnJ;
+                @Z.started -= m_Wrapper.m_SpecialActionsCallbackInterface.OnZ;
+                @Z.performed -= m_Wrapper.m_SpecialActionsCallbackInterface.OnZ;
+                @Z.canceled -= m_Wrapper.m_SpecialActionsCallbackInterface.OnZ;
+                @X.started -= m_Wrapper.m_SpecialActionsCallbackInterface.OnX;
+                @X.performed -= m_Wrapper.m_SpecialActionsCallbackInterface.OnX;
+                @X.canceled -= m_Wrapper.m_SpecialActionsCallbackInterface.OnX;
+                @C.started -= m_Wrapper.m_SpecialActionsCallbackInterface.OnC;
+                @C.performed -= m_Wrapper.m_SpecialActionsCallbackInterface.OnC;
+                @C.canceled -= m_Wrapper.m_SpecialActionsCallbackInterface.OnC;
+                @V.started -= m_Wrapper.m_SpecialActionsCallbackInterface.OnV;
+                @V.performed -= m_Wrapper.m_SpecialActionsCallbackInterface.OnV;
+                @V.canceled -= m_Wrapper.m_SpecialActionsCallbackInterface.OnV;
+                @B.started -= m_Wrapper.m_SpecialActionsCallbackInterface.OnB;
+                @B.performed -= m_Wrapper.m_SpecialActionsCallbackInterface.OnB;
+                @B.canceled -= m_Wrapper.m_SpecialActionsCallbackInterface.OnB;
+                @N.started -= m_Wrapper.m_SpecialActionsCallbackInterface.OnN;
+                @N.performed -= m_Wrapper.m_SpecialActionsCallbackInterface.OnN;
+                @N.canceled -= m_Wrapper.m_SpecialActionsCallbackInterface.OnN;
+                @M.started -= m_Wrapper.m_SpecialActionsCallbackInterface.OnM;
+                @M.performed -= m_Wrapper.m_SpecialActionsCallbackInterface.OnM;
+                @M.canceled -= m_Wrapper.m_SpecialActionsCallbackInterface.OnM;
+            }
+            m_Wrapper.m_SpecialActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Q.started += instance.OnQ;
+                @Q.performed += instance.OnQ;
+                @Q.canceled += instance.OnQ;
+                @W.started += instance.OnW;
+                @W.performed += instance.OnW;
+                @W.canceled += instance.OnW;
+                @E.started += instance.OnE;
+                @E.performed += instance.OnE;
+                @E.canceled += instance.OnE;
+                @R.started += instance.OnR;
+                @R.performed += instance.OnR;
+                @R.canceled += instance.OnR;
+                @T.started += instance.OnT;
+                @T.performed += instance.OnT;
+                @T.canceled += instance.OnT;
+                @Y.started += instance.OnY;
+                @Y.performed += instance.OnY;
+                @Y.canceled += instance.OnY;
+                @U.started += instance.OnU;
+                @U.performed += instance.OnU;
+                @U.canceled += instance.OnU;
+                @A.started += instance.OnA;
+                @A.performed += instance.OnA;
+                @A.canceled += instance.OnA;
+                @S.started += instance.OnS;
+                @S.performed += instance.OnS;
+                @S.canceled += instance.OnS;
+                @D.started += instance.OnD;
+                @D.performed += instance.OnD;
+                @D.canceled += instance.OnD;
+                @F.started += instance.OnF;
+                @F.performed += instance.OnF;
+                @F.canceled += instance.OnF;
+                @G.started += instance.OnG;
+                @G.performed += instance.OnG;
+                @G.canceled += instance.OnG;
+                @H.started += instance.OnH;
+                @H.performed += instance.OnH;
+                @H.canceled += instance.OnH;
+                @J.started += instance.OnJ;
+                @J.performed += instance.OnJ;
+                @J.canceled += instance.OnJ;
+                @Z.started += instance.OnZ;
+                @Z.performed += instance.OnZ;
+                @Z.canceled += instance.OnZ;
+                @X.started += instance.OnX;
+                @X.performed += instance.OnX;
+                @X.canceled += instance.OnX;
+                @C.started += instance.OnC;
+                @C.performed += instance.OnC;
+                @C.canceled += instance.OnC;
+                @V.started += instance.OnV;
+                @V.performed += instance.OnV;
+                @V.canceled += instance.OnV;
+                @B.started += instance.OnB;
+                @B.performed += instance.OnB;
+                @B.canceled += instance.OnB;
+                @N.started += instance.OnN;
+                @N.performed += instance.OnN;
+                @N.canceled += instance.OnN;
+                @M.started += instance.OnM;
+                @M.performed += instance.OnM;
+                @M.canceled += instance.OnM;
+            }
+        }
+    }
+    public SpecialActions @Special => new SpecialActions(this);
     public interface IMovementActions
     {
         void OnLeft(InputAction.CallbackContext context);
@@ -456,5 +1100,29 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         void OnSaveRecordings(InputAction.CallbackContext context);
         void OnStop(InputAction.CallbackContext context);
         void OnCancelRecording(InputAction.CallbackContext context);
+    }
+    public interface ISpecialActions
+    {
+        void OnQ(InputAction.CallbackContext context);
+        void OnW(InputAction.CallbackContext context);
+        void OnE(InputAction.CallbackContext context);
+        void OnR(InputAction.CallbackContext context);
+        void OnT(InputAction.CallbackContext context);
+        void OnY(InputAction.CallbackContext context);
+        void OnU(InputAction.CallbackContext context);
+        void OnA(InputAction.CallbackContext context);
+        void OnS(InputAction.CallbackContext context);
+        void OnD(InputAction.CallbackContext context);
+        void OnF(InputAction.CallbackContext context);
+        void OnG(InputAction.CallbackContext context);
+        void OnH(InputAction.CallbackContext context);
+        void OnJ(InputAction.CallbackContext context);
+        void OnZ(InputAction.CallbackContext context);
+        void OnX(InputAction.CallbackContext context);
+        void OnC(InputAction.CallbackContext context);
+        void OnV(InputAction.CallbackContext context);
+        void OnB(InputAction.CallbackContext context);
+        void OnN(InputAction.CallbackContext context);
+        void OnM(InputAction.CallbackContext context);
     }
 }
