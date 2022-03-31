@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recordedObject: {fileID: 7201651746183948323}
-  fileToLoad: {fileID: 102900000, guid: b6a62bdc8b5b38b49b9a62667879591b, type: 3}
+  fileToLoad: {fileID: 0}
 --- !u!50 &7201651746183948335
 Rigidbody2D:
   serializedVersion: 4
