@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6330060579530734}
   - component: {fileID: 6330060579530739}
   - component: {fileID: 6330060579530733}
+  - component: {fileID: 8547515371943766332}
   m_Layer: 0
   m_Name: ECE - Jason
   m_TagString: Untagged
@@ -114,6 +115,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.49, y: 1.26}
   m_EdgeRadius: 0
+--- !u!114 &8547515371943766332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6330060579530736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e9d43473144d284cbcb55afd3e42b41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterAnim: {fileID: 6734590892315739820}
+  spriteObject: {fileID: 6330060755142384}
+  contactFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 64
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  directionChangeThresh: 0.1
+  standToRunThresh: 0.01
+  standToJumpThresh: 0.1
 --- !u!1 &6330060755142384
 GameObject:
   m_ObjectHideFlags: 0

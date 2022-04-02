@@ -8,7 +8,7 @@ public class DefaultAnimatedScript : MonoBehaviour
     public GameObject spriteObject;
     public ContactFilter2D contactFilter;
     public float directionChangeThresh = 0.1f;
-    public float standToRunThresh = 0.1f;
+    public float standToRunThresh = 0.01f;
     public float standToJumpThresh = 0.1f;
 
     Rigidbody2D rb;

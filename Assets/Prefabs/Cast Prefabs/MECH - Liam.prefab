@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 7453739355296928853}
   - component: {fileID: 7453739355296928852}
   - component: {fileID: 7453739355296928850}
+  - component: {fileID: 8441189155475283410}
   m_Layer: 0
   m_Name: MECH - Liam
   m_TagString: Untagged
@@ -247,3 +248,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.49, y: 1.22}
   m_EdgeRadius: 0
+--- !u!114 &8441189155475283410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7453739355296928848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e9d43473144d284cbcb55afd3e42b41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterAnim: {fileID: 7453739355232849615}
+  spriteObject: {fileID: 7453739355232849613}
+  contactFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 64
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  directionChangeThresh: 0.1
+  standToRunThresh: 0.01
+  standToJumpThresh: 0.1
