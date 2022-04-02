@@ -1,52 +1,55 @@
 fileFormatVersion: 2
-guid: a2414c00734678345a8ef728f52eacb5
+guid: 4def012a99cd0c14799a4a023c45ba9f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2283240458224158984
-    second: ECE - Jason_0
+      213: -8500371682742039450
+    second: Mouth_0
   - first:
-      213: 3287743688686128993
-    second: ECE - Jason_1
+      213: 3552755274266722153
+    second: Mouth_1
   - first:
-      213: -4911140367614669686
-    second: ECE - Jason_2
+      213: 5312185413237325137
+    second: Mouth_2
   - first:
-      213: 7208965128510322776
-    second: ECE - Jason_3
+      213: -4519287248795254462
+    second: Mouth_3
   - first:
-      213: 2117394722548058079
-    second: ECE - Jason_4
+      213: 6345552600209510514
+    second: Mouth_4
   - first:
-      213: -7228577987675910531
-    second: ECE - Jason_5
+      213: 5786952065901537605
+    second: Mouth_5
   - first:
-      213: 7146995164756271659
-    second: ECE - Jason_6
+      213: -8998286008496942464
+    second: Mouth_6
   - first:
-      213: 1797762716849738212
-    second: ECE - Jason_7
+      213: 361462884410452488
+    second: Mouth_7
   - first:
-      213: -5939012833051991995
-    second: ECE - Jason_8
+      213: 8336105643242392105
+    second: Mouth_8
   - first:
-      213: -1398432880236589305
-    second: ECE - Jason_9
+      213: -8811619279130389149
+    second: Mouth_9
   - first:
-      213: 8884992659724152551
-    second: ECE - Jason_10
+      213: -8946397325547603852
+    second: Mouth_10
   - first:
-      213: -4778203630016055036
-    second: ECE - Jason_11
+      213: 2976064761227087781
+    second: Mouth_11
   - first:
-      213: 7621600897435354372
-    second: ECE - Jason_12
+      213: 8497098348859700261
+    second: Mouth_12
   - first:
-      213: -7007921722924344818
-    second: ECE - Jason_13
+      213: 3513958326887374224
+    second: Mouth_13
   - first:
-      213: -5481119214566024249
-    second: ECE - Jason_14
+      213: -3786889829943646779
+    second: Mouth_14
+  - first:
+      213: -7058763039949671141
+    second: Mouth_15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -136,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ECE - Jason_0
+      name: Mouth_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +153,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f6bfbe76ec4050e0800000000000000
-      internalID: -2283240458224158984
+      spriteID: 66c0f5fcdfc980a80800000000000000
+      internalID: -8500371682742039450
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ECE - Jason_1
+      name: Mouth_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96f3090491ced4130800000000000000
+      internalID: 3552755274266722153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mouth_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15db509fc7ca8b940800000000000000
+      internalID: 5312185413237325137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mouth_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2414b9101344841c0800000000000000
+      internalID: -4519287248795254462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mouth_4
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 64
-        height: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +237,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16f4ba4377960ad20800000000000000
-      internalID: 3287743688686128993
+      spriteID: 2705b0f387eef0850800000000000000
+      internalID: 6345552600209510514
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ECE - Jason_2
+      name: Mouth_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 549264c4e326f4050800000000000000
+      internalID: 5786952065901537605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mouth_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0821c2cdc8aaf1380800000000000000
+      internalID: -8998286008496942464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mouth_7
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80ae5c8049c240500800000000000000
+      internalID: 361462884410452488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mouth_8
       rect:
         serializedVersion: 2
         x: 128
         y: 0
-        width: 64
-        height: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +321,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8c0f322bdf18dbb0800000000000000
-      internalID: -4911140367614669686
+      spriteID: 92a879b7aebcfa370800000000000000
+      internalID: 8336105643242392105
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ECE - Jason_3
+      name: Mouth_9
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 365137b93f6d6b580800000000000000
+      internalID: -8811619279130389149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mouth_10
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 478fa3f480308d380800000000000000
+      internalID: -8946397325547603852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mouth_11
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5af8f79e12b1d4920800000000000000
+      internalID: 2976064761227087781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mouth_12
       rect:
         serializedVersion: 2
         x: 192
         y: 0
-        width: 64
-        height: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +405,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8583903f6936b0460800000000000000
-      internalID: 7208965128510322776
+      spriteID: 5243751cde1cbe570800000000000000
+      internalID: 8497098348859700261
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ECE - Jason_4
+      name: Mouth_13
       rect:
         serializedVersion: 2
-        x: 256
+        x: 208
         y: 0
-        width: 64
-        height: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,20 +426,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd783ce184f726d10800000000000000
-      internalID: 2117394722548058079
+      spriteID: 09dd5a50b7614c030800000000000000
+      internalID: 3513958326887374224
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ECE - Jason_5
+      name: Mouth_14
       rect:
         serializedVersion: 2
-        x: 320
+        x: 224
         y: 0
-        width: 64
-        height: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,20 +447,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7e8e5d6e9eeeab90800000000000000
-      internalID: -7228577987675910531
+      spriteID: 5c56ba273c3427bc0800000000000000
+      internalID: -3786889829943646779
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ECE - Jason_6
+      name: Mouth_15
       rect:
         serializedVersion: 2
-        x: 384
+        x: 240
         y: 0
-        width: 64
-        height: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,176 +468,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b226bb66c3a3f2360800000000000000
-      internalID: 7146995164756271659
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ECE - Jason_7
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 0
-        width: 64
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4e115408aafe2f810800000000000000
-      internalID: 1797762716849738212
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ECE - Jason_8
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 0
-        width: 64
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 54023796b43649da0800000000000000
-      internalID: -5939012833051991995
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ECE - Jason_9
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 0
-        width: 64
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 70f854364b4c79ce0800000000000000
-      internalID: -1398432880236589305
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ECE - Jason_10
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 64
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7eeafc2dfb5dd4b70800000000000000
-      internalID: 8884992659724152551
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ECE - Jason_11
-      rect:
-        serializedVersion: 2
-        x: 704
-        y: 0
-        width: 64
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 40939605d1960bdb0800000000000000
-      internalID: -4778203630016055036
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ECE - Jason_12
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 0
-        width: 64
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 405ce6f92ad55c960800000000000000
-      internalID: 7621600897435354372
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ECE - Jason_13
-      rect:
-        serializedVersion: 2
-        x: 832
-        y: 0
-        width: 64
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e0ad953925cdebe90800000000000000
-      internalID: -7007921722924344818
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ECE - Jason_14
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 0
-        width: 64
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7cb59345d172fe3b0800000000000000
-      internalID: -5481119214566024249
+      spriteID: b15b4220a6c3a0e90800000000000000
+      internalID: -7058763039949671141
       vertices: []
       indices: 
       edges: []
