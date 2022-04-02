@@ -104,5 +104,17 @@ public class RecordingManagerInspector : Editor
             recManager.SetControl();
         }
         GUILayout.EndHorizontal();
+
+        // AUDIO SOURCES
+        GUILayout.BeginHorizontal();
+        GUILayout.Label("Metronome Start");
+        GUILayout.FlexibleSpace();
+        recManager.metrnonomeStart = (AudioSource)EditorGUILayout.ObjectField(recManager.metrnonomeStart, typeof(AudioSource), true);
+        GUILayout.EndHorizontal();
+        GUILayout.BeginHorizontal();
+        GUILayout.Label("Voice Clip");
+        GUILayout.FlexibleSpace();
+        recManager.voiceClip = (AudioSource)EditorGUILayout.ObjectField(recManager.voiceClip, typeof(AudioSource), true);
+        GUILayout.EndHorizontal();
     }
 }

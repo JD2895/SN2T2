@@ -6,31 +6,9 @@ using System;
 public class RecordingManager : MonoBehaviour
 {
     public List<ActorItem> cast;
-    /*
-    Controls controls;
 
-    private void Awake()
-    {
-        controls = new Controls();
-
-        controls.Recorder.Record.performed += _ => StartRecording(RecordingMode.Overwrite);
-        controls.Recorder.Play.performed += _ => StartPlayback();
-        controls.Recorder.AdditiveRecord.performed += _ => StartRecording(RecordingMode.Additive);
-        controls.Recorder.SaveRecordings.performed += _ => SaveRecordings();
-        controls.Recorder.Stop.performed += _ => Stop();
-        controls.Recorder.CancelRecording.performed += _ => Cancel();
-    }
-
-    private void OnEnable()
-    {
-        controls.Enable();
-    }
-
-    private void OnDisable()
-    {
-        controls.Disable();
-    }
-    */
+    public AudioSource metrnonomeStart;
+    public AudioSource voiceClip;
 
     private void Start()
     {
@@ -53,6 +31,8 @@ public class RecordingManager : MonoBehaviour
 
     public void StartRecording(RecordingMode recordingMode)
     {
+        StopAudio();
+
         for (int i = 0; i < cast.Count; i++)
         {
             if (cast[i].actor != null)
@@ -67,10 +47,14 @@ public class RecordingManager : MonoBehaviour
                     cast[i].actor.GetComponent<ActionRecorder>().StartPlayback();
             }
         }
+
+        PlayAudio();
     }
 
     public void StartPlayback()
     {
+        StopAudio();
+
         for (int i = 0; i < cast.Count; i++)
         {
             if (cast[i].actor != null)
@@ -82,10 +66,14 @@ public class RecordingManager : MonoBehaviour
                 cast[i].actor.GetComponent<ActionRecorder>().StartPlayback();
             }
         }
+
+        PlayAudio();
     }
 
     public void SaveRecordings()
     {
+        StopAudio();
+
         for (int i = 0; i < cast.Count; i++)
         {
             if (cast[i].actor != null)
@@ -97,6 +85,8 @@ public class RecordingManager : MonoBehaviour
 
     public void Stop()
     {
+        StopAudio();
+
         for (int i = 0; i < cast.Count; i++)
         {
             if (cast[i].actor != null)
@@ -109,6 +99,8 @@ public class RecordingManager : MonoBehaviour
 
     public void Cancel()
     {
+        StopAudio();
+
         for (int i = 0; i < cast.Count; i++)
         {
             if (cast[i].actor != null && cast[i].recordingEnabled)
@@ -116,6 +108,18 @@ public class RecordingManager : MonoBehaviour
                 cast[i].actor.GetComponent<ActionRecorder>().CancelInProgressRecording();
             }
         }
+    }
+
+    void PlayAudio()
+    {
+        metrnonomeStart.Play();
+        voiceClip.Play(144000);
+    }
+
+    void StopAudio()
+    {
+        metrnonomeStart.Stop();
+        voiceClip.Stop();
     }
 }
 
