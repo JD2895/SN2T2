@@ -306,9 +306,7 @@ public class ActionRecorder : MonoBehaviour
 
 #if UNITY_EDITOR
         var folder = Path.Combine(Application.streamingAssetsPath);
-        Debug.Log("before: " + folder);
         folder += "/" + SceneManager.GetActiveScene().name;
-        Debug.Log("after: " + folder);
         if (!Directory.Exists(folder)) 
             Directory.CreateDirectory(folder);
 #else
