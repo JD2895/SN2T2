@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 7201651746183948335}
   - component: {fileID: 7201651746183948333}
   - component: {fileID: 1083385585814968572}
+  - component: {fileID: 9024381278333173215}
   m_Layer: 0
   m_Name: INDY - Izzy
   m_TagString: Untagged
@@ -249,6 +250,20 @@ MonoBehaviour:
   directionChangeThresh: 0.1
   standToRunThresh: 0.01
   standToJumpThresh: 0.1
+--- !u!114 &9024381278333173215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7201651746183948323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598d34c4e7f85e84eb88bc19e7e8090c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recordedObject: {fileID: 7201651746183948323}
+  fileToLoad: {fileID: 0}
 --- !u!1001 &2453181086987870579
 PrefabInstance:
   m_ObjectHideFlags: 0

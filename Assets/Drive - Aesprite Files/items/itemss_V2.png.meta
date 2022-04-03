@@ -1,7 +1,19 @@
 fileFormatVersion: 2
 guid: bdfd464fcf5d24a45a3e6db3a91b66fd
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2017577601297234437
+    second: itemss_V2_31
+  - first:
+      213: -1295963169443367307
+    second: itemss_V2_32
+  - first:
+      213: -1498649641758493473
+    second: itemss_V2_33
+  - first:
+      213: -1757932835587348364
+    second: itemss_V2_39
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -91,13 +103,34 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TemplateChar_0
+      name: itemss_V2_31
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf5c4e77cdf1004e0800000000000000
+      internalID: -2017577601297234437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: itemss_V2_32
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 80
+        width: 16
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -105,20 +138,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7baff95fd64de8d10800000000000000
-      internalID: 2129873242530249399
+      spriteID: 576b65b1d50d30ee0800000000000000
+      internalID: -1295963169443367307
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TemplateChar_1
+      name: itemss_V2_33
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 80
+        x: 16
+        y: 32
+        width: 16
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85e5430a126119590800000000000000
-      internalID: -7669324356757725608
+      spriteID: fd4f73c471ab33be0800000000000000
+      internalID: -1498649641758493473
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TemplateChar_2
+      name: itemss_V2_39
       rect:
         serializedVersion: 2
-        x: 128
+        x: 16
         y: 0
-        width: 64
-        height: 80
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,8 +180,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69439a9558a280120800000000000000
-      internalID: 2380199155288585366
+      spriteID: 47822d366619a97e0800000000000000
+      internalID: -1757932835587348364
       vertices: []
       indices: 
       edges: []

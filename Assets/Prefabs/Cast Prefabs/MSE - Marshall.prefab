@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3004281692916368791}
   - component: {fileID: 5706929347867444501}
   - component: {fileID: 407942857994256601}
+  - component: {fileID: 5841580951435928321}
   m_Layer: 0
   m_Name: MSE - Marshall
   m_TagString: Untagged
@@ -146,6 +147,20 @@ MonoBehaviour:
   directionChangeThresh: 0.1
   standToRunThresh: 0.01
   standToJumpThresh: 0.1
+--- !u!114 &5841580951435928321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3808700019894613496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598d34c4e7f85e84eb88bc19e7e8090c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recordedObject: {fileID: 3808700019894613496}
+  fileToLoad: {fileID: 0}
 --- !u!1 &5768524294264098767
 GameObject:
   m_ObjectHideFlags: 0
