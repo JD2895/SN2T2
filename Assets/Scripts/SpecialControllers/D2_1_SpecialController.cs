@@ -29,6 +29,7 @@ public class D2_1_SpecialController : SpecialControllerBase
     // M > 
 
     public ObjectSpawner objectSpawner;
+    public TileCracker tileCracker;
 
     #region *** Group ONE ***
     public override void Q_start()
@@ -38,6 +39,7 @@ public class D2_1_SpecialController : SpecialControllerBase
 
     public override void W_start()
     {
+        tileCracker.NextCrack();
     }
 
     public override void E_start()
