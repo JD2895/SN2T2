@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CHEM_ELENA_SpecialController : SpecialControllerBase
+public class MECH_LIAM_SpecialController : SpecialControllerBase
 {
     // Q > Flip Sprite
     // W > Side
     // E > Run
     // R > Jump
     // T > Hold
-    // Y > Battle
-    // U > Throw
+    // Y > Hammer
+    // U > Battle
 
-    // A >
-    // S > 
+    // A > Throw
+    // S > Hurt
     // D > 
     // F > 
     // G > 
@@ -62,16 +62,25 @@ public class CHEM_ELENA_SpecialController : SpecialControllerBase
 
     public override void Y_start()
     {
-        characterAnim.SetTrigger("battle");
+        characterAnim.SetTrigger("hammer");
     }
 
     public override void U_start()
     {
-        characterAnim.SetTrigger("throw");
+        characterAnim.SetTrigger("battle");
     }
     #endregion
 
     #region *** Group TWO ***
+    public override void A_start()
+    {
+        characterAnim.SetTrigger("throw");
+    }
+
+    public override void S_start()
+    {
+        characterAnim.SetTrigger("hurt");
+    }
     #endregion
 
     #region *** Group THREE ***

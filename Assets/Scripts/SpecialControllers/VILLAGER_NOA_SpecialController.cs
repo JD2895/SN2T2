@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CHEM_ELENA_SpecialController : SpecialControllerBase
+public class VILLAGER_NOA_SpecialController : SpecialControllerBase
 {
     // Q > Flip Sprite
     // W > Side
     // E > Run
-    // R > Jump
-    // T > Hold
-    // Y > Battle
-    // U > Throw
+    // R > Point
+    // T > Give
+    // Y > 
+    // U > 
 
-    // A >
+    // A > 
     // S > 
     // D > 
     // F > 
@@ -52,22 +52,12 @@ public class CHEM_ELENA_SpecialController : SpecialControllerBase
 
     public override void R_start()
     {
-        characterAnim.SetTrigger("jump");
+        characterAnim.SetTrigger("point");
     }
 
     public override void T_start()
     {
-        characterAnim.SetTrigger("hold");
-    }
-
-    public override void Y_start()
-    {
-        characterAnim.SetTrigger("battle");
-    }
-
-    public override void U_start()
-    {
-        characterAnim.SetTrigger("throw");
+        characterAnim.SetTrigger("give");
     }
     #endregion
 

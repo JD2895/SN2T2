@@ -2865,14 +2865,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1268694110}
     m_Modifications:
-    - target: {fileID: 6330060579530732, guid: d1f302e26590c424d9343a0e0f57961a, type: 3}
-      propertyPath: jumpForce
-      value: 9.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6330060579530732, guid: d1f302e26590c424d9343a0e0f57961a, type: 3}
-      propertyPath: sideMoveMax
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 6330060579530734, guid: d1f302e26590c424d9343a0e0f57961a, type: 3}
       propertyPath: fileToLoad
       value: 
@@ -2927,7 +2919,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8547515371943766332, guid: d1f302e26590c424d9343a0e0f57961a, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1f302e26590c424d9343a0e0f57961a, type: 3}

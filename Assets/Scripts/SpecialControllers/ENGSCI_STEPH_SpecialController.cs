@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CHEM_ELENA_SpecialController : SpecialControllerBase
+public class ENGSCI_STEPH_SpecialController : SpecialControllerBase
 {
     // Q > Flip Sprite
     // W > Side
     // E > Run
     // R > Jump
-    // T > Hold
-    // Y > Battle
-    // U > Throw
+    // T > Ok
+    // Y > Hold
+    // U > Battle
 
-    // A >
+    // A > 
     // S > 
     // D > 
     // F > 
@@ -57,17 +57,17 @@ public class CHEM_ELENA_SpecialController : SpecialControllerBase
 
     public override void T_start()
     {
-        characterAnim.SetTrigger("hold");
+        characterAnim.SetTrigger("ok");
     }
 
     public override void Y_start()
     {
-        characterAnim.SetTrigger("battle");
+        characterAnim.SetTrigger("hold");
     }
 
     public override void U_start()
     {
-        characterAnim.SetTrigger("throw");
+        characterAnim.SetTrigger("battle");
     }
     #endregion
 

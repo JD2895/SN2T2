@@ -2,19 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CHEM_ELENA_SpecialController : SpecialControllerBase
+public class INDY_IZZY_SpecialController : SpecialControllerBase
 {
     // Q > Flip Sprite
     // W > Side
     // E > Run
     // R > Jump
-    // T > Hold
-    // Y > Battle
-    // U > Throw
+    // T > Press
+    // Y > Hold
+    // U > Battle
 
-    // A >
-    // S > 
-    // D > 
+    // A > Gun Idle
+    // S > Gun Run
+    // D > Gun Jump
     // F > 
     // G > 
     // H > 
@@ -57,21 +57,35 @@ public class CHEM_ELENA_SpecialController : SpecialControllerBase
 
     public override void T_start()
     {
-        characterAnim.SetTrigger("hold");
+        characterAnim.SetTrigger("press");
     }
 
     public override void Y_start()
     {
-        characterAnim.SetTrigger("battle");
+        characterAnim.SetTrigger("hold");
     }
 
     public override void U_start()
     {
-        characterAnim.SetTrigger("throw");
+        characterAnim.SetTrigger("battle");
     }
     #endregion
 
     #region *** Group TWO ***
+    public override void A_start()
+    {
+        characterAnim.SetTrigger("gun_idle");
+    }
+
+    public override void S_start()
+    {
+        characterAnim.SetTrigger("gun_run");
+    }
+
+    public override void D_start()
+    {
+        characterAnim.SetTrigger("gun_jump");
+    }
     #endregion
 
     #region *** Group THREE ***
