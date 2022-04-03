@@ -127,7 +127,7 @@ public class UIController : MonoBehaviour
         {
             int itemIndex = FindInCastList(kvp.Value);
             recordingManager.cast[itemIndex].movementEnabled = (kvp.Key.isOn && movementToggle.isOn);
-            recordingManager.SetControlIndex(itemIndex);
+            recordingManager.SetMovementControlIndex(itemIndex);
         }
     }
 
@@ -136,7 +136,7 @@ public class UIController : MonoBehaviour
         foreach (KeyValuePair<Toggle, ActorItem> kvp in toggleReference)
         {
             int itemIndex = FindInCastList(kvp.Value); recordingManager.cast[itemIndex].specialEnabled = (kvp.Key.isOn && specialToggle.isOn);
-            //recordingManager.SetControlIndex(itemIndex); but for special
+            recordingManager.SetSpecialControlIndex(itemIndex);
         }
 
     }
@@ -149,10 +149,10 @@ public class UIController : MonoBehaviour
         recordingManager.cast[itemIndex].recordingEnabled = (castSelected.isOn && recordToggle.isOn);
         
         recordingManager.cast[itemIndex].movementEnabled = (castSelected.isOn && movementToggle.isOn);
-        recordingManager.SetControlIndex(itemIndex);
+        recordingManager.SetMovementControlIndex(itemIndex);
 
         recordingManager.cast[itemIndex].specialEnabled = (castSelected.isOn && specialToggle.isOn);
-        //recordingManager.SetControlIndex(itemIndex); but for special
+        recordingManager.SetSpecialControlIndex(itemIndex);
     }
 
     int FindInCastList(ActorItem toFind)

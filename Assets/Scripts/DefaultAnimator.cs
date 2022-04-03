@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DefaultAnimatedScript : MonoBehaviour
+public class DefaultAnimator : MonoBehaviour
 {
     public Animator characterAnim;
     public GameObject spriteObject;

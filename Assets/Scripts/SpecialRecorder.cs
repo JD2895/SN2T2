@@ -357,6 +357,7 @@ public class SpecialRecorder : MonoBehaviour
 
 #if UNITY_EDITOR
         var folder = Path.Combine(Application.streamingAssetsPath);
+        folder += "/" + SceneManager.GetActiveScene().name;
         if (!Directory.Exists(folder))
             Directory.CreateDirectory(folder);
 #else

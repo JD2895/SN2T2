@@ -4,6 +4,47 @@ using UnityEngine;
 
 public class SpecialControllerBase : MonoBehaviour
 {
+    Controls controls;
+    bool controlEnabled = true;
+
+    private void Awake()
+    {
+        controls = new Controls();
+        controls.Special.Q.performed += _ => Q_start();
+        controls.Special.W.performed += _ => W_start();
+        controls.Special.E.performed += _ => E_start();
+        controls.Special.R.performed += _ => R_start();
+        controls.Special.T.performed += _ => T_start();
+        controls.Special.Y.performed += _ => Y_start();
+        controls.Special.U.performed += _ => U_start();
+
+        controls.Special.A.performed += _ => A_start();
+        controls.Special.S.performed += _ => S_start();
+        controls.Special.D.performed += _ => D_start();
+        controls.Special.F.performed += _ => F_start();
+        controls.Special.G.performed += _ => G_start();
+        controls.Special.H.performed += _ => H_start();
+        controls.Special.J.performed += _ => J_start();
+
+        controls.Special.Z.performed += _ => Z_start();
+        controls.Special.X.performed += _ => X_start();
+        controls.Special.C.performed += _ => C_start();
+        controls.Special.V.performed += _ => V_start();
+        controls.Special.B.performed += _ => B_start();
+        controls.Special.N.performed += _ => N_start();
+        controls.Special.M.performed += _ => M_start();
+    }
+
+    private void OnEnable()
+    {
+        controls.Enable();
+    }
+
+    private void OnDisable()
+    {
+        controls.Disable();
+    }
+
     public virtual void Q_start() { Debug.Log("q"); }
     public virtual void W_start() { Debug.Log("w"); }
     public virtual void E_start() { Debug.Log("e"); }
@@ -27,4 +68,23 @@ public class SpecialControllerBase : MonoBehaviour
     public virtual void B_start() { Debug.Log("b"); }
     public virtual void N_start() { Debug.Log("n"); }
     public virtual void M_start() { Debug.Log("m"); }
+
+    public virtual void Reset()
+    {
+        W_start();
+        X_start();
+    }
+
+    public virtual void SetControllable(bool toSet)
+    {
+        if (toSet)
+        {
+            controls.Special.Enable();
+        }
+        else
+        {
+            controls.Special.Disable();
+        }
+        controlEnabled = toSet;
+    }
 }

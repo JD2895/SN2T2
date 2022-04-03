@@ -20,13 +20,22 @@ public class RecordingManager : MonoBehaviour
         for(int i = 0; i < cast.Count; i++)
         {
             if(cast[i].actor != null)
+            {
                 cast[i].actor.GetComponent<MovementController>().SetControllable(cast[i].movementEnabled);
+                cast[i].actor.GetComponent<SpecialControllerBase>().SetControllable(cast[i].specialEnabled);
+            }
+                
         }
     }
 
-    public void SetControlIndex(int i)
+    public void SetMovementControlIndex(int i)
     {
         cast[i].actor.GetComponent<MovementController>().SetControllable(cast[i].movementEnabled);
+    }
+
+    public void SetSpecialControlIndex(int i)
+    {
+        cast[i].actor.GetComponent<SpecialControllerBase>().SetControllable(cast[i].specialEnabled);
     }
 
     public void StartRecording(RecordingMode recordingMode)
@@ -39,12 +48,21 @@ public class RecordingManager : MonoBehaviour
             {
                 cast[i].actor.GetComponent<ActionRecorder>().SaveInProgressRecording();
                 cast[i].actor.GetComponent<ActionRecorder>().StopPlayback();
+                cast[i].actor.GetComponent<SpecialRecorder>().SaveInProgressRecording();
+                cast[i].actor.GetComponent<SpecialRecorder>().StopPlayback();
                 cast[i].actor.GetComponent<MovementController>().Reset();
+                cast[i].actor.GetComponent<SpecialControllerBase>().Reset();
 
                 if (cast[i].recordingEnabled)
+                {
                     cast[i].actor.GetComponent<ActionRecorder>().StartRecording(recordingMode);
+                    cast[i].actor.GetComponent<SpecialRecorder>().StartRecording(recordingMode);
+                }
                 else
+                {
                     cast[i].actor.GetComponent<ActionRecorder>().StartPlayback();
+                    cast[i].actor.GetComponent<SpecialRecorder>().StartPlayback();
+                }
             }
         }
 
@@ -61,9 +79,13 @@ public class RecordingManager : MonoBehaviour
             {
                 cast[i].actor.GetComponent<ActionRecorder>().SaveInProgressRecording();
                 cast[i].actor.GetComponent<ActionRecorder>().StopPlayback();
+                cast[i].actor.GetComponent<SpecialRecorder>().SaveInProgressRecording();
+                cast[i].actor.GetComponent<SpecialRecorder>().StopPlayback();
 
                 cast[i].actor.GetComponent<MovementController>().Reset();
                 cast[i].actor.GetComponent<ActionRecorder>().StartPlayback();
+                cast[i].actor.GetComponent<SpecialControllerBase>().Reset();
+                cast[i].actor.GetComponent<SpecialRecorder>().StartPlayback();
             }
         }
 
@@ -79,6 +101,7 @@ public class RecordingManager : MonoBehaviour
             if (cast[i].actor != null)
             {
                 cast[i].actor.GetComponent<ActionRecorder>().WriteToFile();
+                cast[i].actor.GetComponent<SpecialRecorder>().WriteToFile();
             }
         }
     }
@@ -93,6 +116,8 @@ public class RecordingManager : MonoBehaviour
             {
                 cast[i].actor.GetComponent<ActionRecorder>().Stop();
                 cast[i].actor.GetComponent<MovementController>().Reset();
+                cast[i].actor.GetComponent<SpecialRecorder>().Stop();
+                cast[i].actor.GetComponent<SpecialControllerBase>().Reset();
             }
         }
     }
@@ -106,6 +131,7 @@ public class RecordingManager : MonoBehaviour
             if (cast[i].actor != null && cast[i].recordingEnabled)
             {
                 cast[i].actor.GetComponent<ActionRecorder>().CancelInProgressRecording();
+                cast[i].actor.GetComponent<SpecialRecorder>().CancelInProgressRecording();
             }
         }
     }

@@ -312,7 +312,7 @@ public class ActionRecorder : MonoBehaviour
 #else
     var folder = Application.persistentDataPath;
 #endif
-        var filePath = Path.Combine(folder, SceneManager.GetActiveScene().name + "_" + this.gameObject.name + ".csv");
+        var filePath = Path.Combine(folder, SceneManager.GetActiveScene().name + "_" + this.gameObject.name + "_MV.csv");
 
         using(var writer = new StreamWriter(filePath, false))
         {

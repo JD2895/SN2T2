@@ -12,15 +12,15 @@ public class MovementController : MonoBehaviour
     bool controlEnabled = true;
 
     [Header("Side Movement")]
-    public float sideMoveAcceleration;
-    public float sideMoveMax;
-    public float noInputFrictionMultiplier;
+    float sideMoveAcceleration = 30f;
+    float sideMoveMax = 4f;
+    float noInputFrictionMultiplier = 1.3f;
     MoveDir toMoveDir = MoveDir.None;
 
     [Header("Jump")]
-    public float jumpForce;
-    public float jumpBrakeMultiplier;
-    public float minimumVelocityForJumpBrake;
+    float jumpForce = 9.5f;
+    float jumpBrakeMultiplier = 2f;
+    float minimumVelocityForJumpBrake = 1f;
 
     private void Awake()
     {
