@@ -53,14 +53,21 @@ public class RecordingManager : MonoBehaviour
                 cast[i].actor.GetComponent<MovementController>().Reset();
                 cast[i].actor.GetComponent<SpecialControllerBase>().Reset();
 
-                if (cast[i].recordingEnabled)
+                if (cast[i].recordingEnabled && cast[i].movementEnabled)
                 {
                     cast[i].actor.GetComponent<ActionRecorder>().StartRecording(recordingMode);
-                    cast[i].actor.GetComponent<SpecialRecorder>().StartRecording(recordingMode);
                 }
                 else
                 {
                     cast[i].actor.GetComponent<ActionRecorder>().StartPlayback();
+                }
+
+                if (cast[i].recordingEnabled && cast[i].specialEnabled)
+                {
+                    cast[i].actor.GetComponent<SpecialRecorder>().StartRecording(recordingMode);
+                }
+                else
+                {
                     cast[i].actor.GetComponent<SpecialRecorder>().StartPlayback();
                 }
             }

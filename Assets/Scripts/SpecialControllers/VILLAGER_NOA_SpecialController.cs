@@ -111,5 +111,13 @@ public class VILLAGER_NOA_SpecialController : SpecialControllerBase
                 mouths[i].SetActive(false);
         }
     }
+
+    public override void FaceForward()
+    {
+        Vector3 newScale = spriteObject.transform.localScale;
+        if (newScale.x < 0)
+            newScale.x *= -1;
+        spriteObject.transform.localScale = newScale;
+    }
     #endregion
 }

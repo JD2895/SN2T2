@@ -76,6 +76,11 @@ public class MIN_ERNIE_SpecialController : SpecialControllerBase
     {
         characterAnim.SetTrigger("throw");
     }
+
+    public override void S_start()
+    {
+        characterAnim.SetTrigger("hold_coins");
+    }
     #endregion
 
     #region *** Group THREE ***
@@ -124,6 +129,14 @@ public class MIN_ERNIE_SpecialController : SpecialControllerBase
             else
                 mouths[i].SetActive(false);
         }
+    }
+
+    public override void FaceForward()
+    {
+        Vector3 newScale = spriteObject.transform.localScale;
+        if (newScale.x < 0)
+            newScale.x *= -1;
+        spriteObject.transform.localScale = newScale;
     }
     #endregion
 }

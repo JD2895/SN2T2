@@ -69,10 +69,13 @@ public class SpecialControllerBase : MonoBehaviour
     public virtual void N_start() { Debug.Log("n"); }
     public virtual void M_start() { Debug.Log("m"); }
 
+    public virtual void FaceForward() { }
+
     public virtual void Reset()
     {
         W_start();
         X_start();
+        FaceForward();
     }
 
     public virtual void SetControllable(bool toSet)

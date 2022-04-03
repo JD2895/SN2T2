@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 5915266912172144297}
   - component: {fileID: 5915266912172144308}
   - component: {fileID: 5915266912172144309}
-  - component: {fileID: 6822218256241591789}
   - component: {fileID: 6842521063580671044}
+  - component: {fileID: 6822218256241591789}
   - component: {fileID: 5915266912172144310}
   - component: {fileID: 5915266912172144296}
   - component: {fileID: 4112865233300355751}
@@ -65,6 +65,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recordedObject: {fileID: 5915266912172144298}
   fileToLoad: {fileID: 0}
+--- !u!114 &6842521063580671044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5915266912172144298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598d34c4e7f85e84eb88bc19e7e8090c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recordedObject: {fileID: 5915266912172144298}
+  fileToLoad: {fileID: 0}
 --- !u!114 &6822218256241591789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,20 +100,6 @@ MonoBehaviour:
   - {fileID: 839646657214740713}
   - {fileID: 1955353515332780804}
   - {fileID: 7937206947118182951}
---- !u!114 &6842521063580671044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5915266912172144298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 598d34c4e7f85e84eb88bc19e7e8090c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  recordedObject: {fileID: 5915266912172144298}
-  fileToLoad: {fileID: 0}
 --- !u!50 &5915266912172144310
 Rigidbody2D:
   serializedVersion: 4
