@@ -28,7 +28,7 @@ public class D2_1_SpecialController : SpecialControllerBase
     // N > 
     // M > 
 
-    ObjectSpawner objectSpawner;
+    public ObjectSpawner objectSpawner;
 
     #region *** Group ONE ***
     public override void Q_start()

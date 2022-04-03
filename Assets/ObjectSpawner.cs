@@ -9,9 +9,9 @@ public class ObjectSpawner : MonoBehaviour
 
     public Transform positionToSpawn;
 
-    public float throwForce;
+    float throwForce = 4f;
     GameObject previousObject;
-    float previousHorizontalDirection = 1f;
+    float previousHorizontalDirection = 0.5f;
 
     private void Start()
     {
@@ -25,21 +25,22 @@ public class ObjectSpawner : MonoBehaviour
             Vector2 throwDirection = NewThrowDirection();
             Rigidbody2D prevRB = previousObject.GetComponent<Rigidbody2D>();
             prevRB.bodyType = RigidbodyType2D.Dynamic;
-            prevRB.AddForce(throwDirection * throwForce);
+            prevRB.AddForce(throwDirection * throwForce, ForceMode2D.Impulse);
         }
 
         if (listCounter < objectsToSpawn.Count)
         {
             previousObject = Instantiate(objectsToSpawn[listCounter], positionToSpawn);
+            listCounter++;
         }
     }
 
     Vector2 NewThrowDirection()
     {
         Vector2 finalThrowDirection = Vector2.zero;
-        finalThrowDirection.x = previousHorizontalDirection;
+        finalThrowDirection.x = previousHorizontalDirection + (Random.Range(-0.9f, 0.5f) * previousHorizontalDirection);
 
-        finalThrowDirection.y = 1 + Random.Range(-0.5f, 0.5f);
+        finalThrowDirection.y = 1.5f + Random.Range(-0.5f, 0.5f);
 
         previousHorizontalDirection *= -1f;
         return finalThrowDirection;
