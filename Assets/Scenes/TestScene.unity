@@ -2588,6 +2588,8 @@ MonoBehaviour:
     recordingEnabled: 0
     movementEnabled: 0
     specialEnabled: 0
+  metrnonomeStart: {fileID: 1000058160}
+  voiceClip: {fileID: 1000058161}
 --- !u!82 &1000058160
 AudioSource:
   m_ObjectHideFlags: 0
