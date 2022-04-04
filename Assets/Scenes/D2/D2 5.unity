@@ -2269,6 +2269,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lumberAnim: {fileID: 475428112}
   plusHammerText: {fileID: 1400548109}
+  ece: {fileID: 930387173}
+  boat: {fileID: 0}
+  boatSpawnPoint: {fileID: 0}
+  eceSpawnPoint: {fileID: 475428111}
 --- !u!1 &815007778
 GameObject:
   m_ObjectHideFlags: 0
@@ -4915,14 +4919,70 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6330060755142386, guid: d1f302e26590c424d9343a0e0f57961a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 181482456243832655, guid: d1f302e26590c424d9343a0e0f57961a, type: 3}
       propertyPath: m_LocalPosition.z
       value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 688357290347485408, guid: d1f302e26590c424d9343a0e0f57961a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1728561170412712141, guid: d1f302e26590c424d9343a0e0f57961a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2837118755167048052, guid: d1f302e26590c424d9343a0e0f57961a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3046702084198448004, guid: d1f302e26590c424d9343a0e0f57961a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3847566134645301016, guid: d1f302e26590c424d9343a0e0f57961a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5019338671565580928, guid: d1f302e26590c424d9343a0e0f57961a, type: 3}
       propertyPath: fileToLoad
       value: 
       objectReference: {fileID: 102900000, guid: cecf956ad48c91644a2cb79bc4e0f278, type: 3}
+    - target: {fileID: 5274914038595282021, guid: d1f302e26590c424d9343a0e0f57961a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5332432369974290137, guid: d1f302e26590c424d9343a0e0f57961a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609055416802410490, guid: d1f302e26590c424d9343a0e0f57961a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5890067593841601883, guid: d1f302e26590c424d9343a0e0f57961a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6126993583353172564, guid: d1f302e26590c424d9343a0e0f57961a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235800152877376823, guid: d1f302e26590c424d9343a0e0f57961a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683454136749167978, guid: d1f302e26590c424d9343a0e0f57961a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7974128692246276385, guid: d1f302e26590c424d9343a0e0f57961a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 8547515371943766332, guid: d1f302e26590c424d9343a0e0f57961a, type: 3}
       propertyPath: m_Enabled
       value: 0
