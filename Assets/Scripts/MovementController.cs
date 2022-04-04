@@ -13,7 +13,7 @@ public class MovementController : MonoBehaviour
 
     [Header("Side Movement")]
     float sideMoveAcceleration = 30f;
-    float sideMoveMax = 4f;
+    public float sideMoveMax = 4f;
     float noInputFrictionMultiplier = 1.3f;
     MoveDir toMoveDir = MoveDir.None;
 
