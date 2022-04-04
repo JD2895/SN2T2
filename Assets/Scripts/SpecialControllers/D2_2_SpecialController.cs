@@ -21,15 +21,19 @@ public class D2_2_SpecialController : SpecialControllerBase
     // J > 
 
     // Z > +1 Hammer
-    // X > 
-    // C > 
+    // X > ECE Active Toggle
+    // C > ECE Spawn
     // V > 
     // B > 
-    // N > 
-    // M > 
+    // N > Boat Appears
+    // M > Boat Kinematic
 
     public Animator lumberAnim;
     public GameObject plusHammerText;
+    public GameObject ece;
+    public GameObject boat;
+    public Transform boatSpawnPoint;
+    public Transform eceSpawnPoint;
 
     #region *** Group ONE ***
     public override void Q_start()
@@ -86,12 +90,40 @@ public class D2_2_SpecialController : SpecialControllerBase
     {
         plusHammerText.SetActive(true);
     }
+
+    public override void X_start()
+    {
+        ece.SetActive(!ece.activeSelf);
+    }
+
+    public override void C_start()
+    {
+        ece.transform.position = eceSpawnPoint.position;
+    }
+
+    public override void N_start()
+    {
+        if (boat != null)
+            boat.transform.position = boatSpawnPoint.position;
+    }
+
+    public override void M_start()
+    {
+        if (boat != null)
+            boat.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+    }
     #endregion
 
     #region *** Helpers ***
     public override void Reset()
     {
         Q_start();
+        ece.SetActive(true);
+        if (boat != null)
+        {
+            boat.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            boat.transform.position = new Vector3(-12.89f, 0.37f, 4.571f);
+        }
     }
     #endregion
 }
