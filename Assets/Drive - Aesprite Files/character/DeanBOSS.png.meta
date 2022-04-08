@@ -107,6 +107,9 @@ TextureImporter:
   - first:
       213: 492772424419587725
     second: DeanBOSS_34
+  - first:
+      213: -1629348349073569124
+    second: DeanBOSS_35
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -926,6 +929,27 @@ TextureImporter:
       bones: []
       spriteID: d8633a0c8eda6d600800000000000000
       internalID: 492772424419587725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeanBOSS_35
+      rect:
+        serializedVersion: 2
+        x: 10080
+        y: 0
+        width: 288
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9ac9162f446369e0800000000000000
+      internalID: -1629348349073569124
       vertices: []
       indices: 
       edges: []
