@@ -5,7 +5,7 @@ using UnityEngine;
 public class D4_1_SpecialController : SpecialControllerBase
 {
     // Q > Move Camera
-    // W > 
+    // W > Move Camera 2
     // E > 
     // R > 
     // T > 
@@ -20,8 +20,8 @@ public class D4_1_SpecialController : SpecialControllerBase
     // H > 
     // J > 
 
-    // Z > 
-    // X > 
+    // Z > Move Boss In
+    // X > Move Tie In
     // C > 
     // V > 
     // B > 
@@ -30,6 +30,11 @@ public class D4_1_SpecialController : SpecialControllerBase
 
     Vector3 initialCameraPosition;
     public Animator cameraAnimator;
+
+    public GameObject bossObject;
+    public Transform bossStartPos;
+    public Transform bossEndPos;
+    public float moveInTime;
 
     private void Start()
     {
@@ -44,6 +49,7 @@ public class D4_1_SpecialController : SpecialControllerBase
 
     public override void W_start()
     {
+        cameraAnimator.SetTrigger("panToBoss");
     }
 
     public override void E_start()
@@ -70,6 +76,7 @@ public class D4_1_SpecialController : SpecialControllerBase
     #region *** Group TWO ***
     public override void A_start()
     {
+        StartCoroutine(MoveInBoss());
     }
 
     public override void S_start()
@@ -103,6 +110,30 @@ public class D4_1_SpecialController : SpecialControllerBase
     public override void Reset()
     {
         Camera.main.transform.position = initialCameraPosition;
+    }
+
+    IEnumerator MoveInBoss()
+    {
+        Vector3 startPos = bossStartPos.position;
+        Vector3 endPos = bossEndPos.position;
+        Vector3 newPos = new Vector3();
+        float timePeriod = 0.01f;
+        float lerpPeriod = timePeriod / moveInTime;
+        float lerpValue = 0;
+
+        bossObject.transform.position = startPos;
+
+        for (float timePassed = 0f; timePassed < moveInTime; timePassed += timePeriod)
+        {
+            newPos = Vector3.Lerp(startPos, endPos, lerpValue);
+            bossObject.transform.position = newPos;
+            lerpValue += lerpPeriod;
+            yield return new WaitForSeconds(timePeriod);
+        }
+
+        bossObject.transform.position = endPos;
+
+        yield return null;
     }
     #endregion
 }
