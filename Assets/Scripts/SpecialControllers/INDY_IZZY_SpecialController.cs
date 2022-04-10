@@ -33,6 +33,7 @@ public class INDY_IZZY_SpecialController : SpecialControllerBase
     public GameObject[] mouths;
 
     public ProjectileFirer laserGun;
+    public ProjectileFirer potatoThrower;
 
     #region *** Group ONE ***
     public override void Q_start()
@@ -97,6 +98,12 @@ public class INDY_IZZY_SpecialController : SpecialControllerBase
     public override void G_start()
     {
         characterAnim.SetTrigger("throw");
+    }
+
+    public override void H_start()
+    {
+        potatoThrower.firingSpeed = Random.Range(10f, 15f);
+        potatoThrower.FireProjectile();
     }
     #endregion
 

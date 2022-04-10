@@ -12,8 +12,8 @@ public class ENGSCI_STEPH_SpecialController : SpecialControllerBase
     // Y > Hold
     // U > Battle
 
-    // A > 
-    // S > 
+    // A > Hurt Hit
+    // S > Dead
     // D > 
     // F > 
     // G > 
@@ -31,6 +31,9 @@ public class ENGSCI_STEPH_SpecialController : SpecialControllerBase
     public Animator characterAnim;
     public GameObject spriteObject;
     public GameObject[] mouths;
+
+    public GameObject title;
+    public GameObject deadTitle;
 
     #region *** Group ONE ***
     public override void Q_start()
@@ -72,6 +75,17 @@ public class ENGSCI_STEPH_SpecialController : SpecialControllerBase
     #endregion
 
     #region *** Group TWO ***
+    public override void A_start()
+    {
+        characterAnim.SetTrigger("hurt_hit");
+    }
+
+    public override void S_start()
+    {
+        spriteObject.SetActive(false);
+        title.SetActive(false);
+        deadTitle.SetActive(false);
+    }
     #endregion
 
     #region *** Group THREE ***

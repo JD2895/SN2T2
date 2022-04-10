@@ -14,9 +14,9 @@ public class MECH_LIAM_SpecialController : SpecialControllerBase
 
     // A > Throw
     // S > Hurt
-    // D > 
-    // F > 
-    // G > 
+    // D > Hurt Hit
+    // F > Dead
+    // G > Throw Gear
     // H > 
     // J > 
 
@@ -31,6 +31,10 @@ public class MECH_LIAM_SpecialController : SpecialControllerBase
     public Animator characterAnim;
     public GameObject spriteObject;
     public GameObject[] mouths;
+
+    public GameObject title;
+    public GameObject deadTitle;
+    public ProjectileFirer gearThrower;
 
     #region *** Group ONE ***
     public override void Q_start()
@@ -80,6 +84,23 @@ public class MECH_LIAM_SpecialController : SpecialControllerBase
     public override void S_start()
     {
         characterAnim.SetTrigger("hurt");
+    }
+
+    public override void D_start()
+    {
+        characterAnim.SetTrigger("hurt_hit");
+    }
+
+    public override void F_start()
+    {
+        spriteObject.SetActive(false);
+        title.SetActive(false);
+        deadTitle.SetActive(false);
+    }
+
+    public override void G_start()
+    {
+        gearThrower.FireProjectile();
     }
     #endregion
 

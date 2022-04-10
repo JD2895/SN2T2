@@ -13,8 +13,8 @@ public class ECE_JASON_SpecialController : SpecialControllerBase
     // U > Hack
 
     // A > Battle
-    // S > 
-    // D > 
+    // S > Disappear
+    // D > Dead
     // F > 
     // G > 
     // H > 
@@ -31,6 +31,9 @@ public class ECE_JASON_SpecialController : SpecialControllerBase
     public Animator characterAnim;
     public GameObject spriteObject;
     public GameObject[] mouths;
+
+    public GameObject title;
+    public GameObject deadTitle;
 
     #region *** Group ONE ***
     public override void Q_start()
@@ -75,6 +78,17 @@ public class ECE_JASON_SpecialController : SpecialControllerBase
     public override void A_start()
     {
         characterAnim.SetTrigger("battle");
+    }
+
+    public override void S_start()
+    {
+        spriteObject.SetActive(false);
+    }
+
+    public override void D_start()
+    {
+        title.SetActive(false);
+        deadTitle.SetActive(false);
     }
     #endregion
 

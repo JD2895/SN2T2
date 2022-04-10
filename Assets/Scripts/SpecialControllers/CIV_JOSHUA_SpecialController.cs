@@ -12,7 +12,7 @@ public class CIV_JOSHUA_SpecialController : SpecialControllerBase
     // Y > Ladder
     // U > Battle
 
-    // A > 
+    // A > Attack Beam
     // S > 
     // D > 
     // F > 
@@ -31,6 +31,8 @@ public class CIV_JOSHUA_SpecialController : SpecialControllerBase
     public Animator characterAnim;
     public GameObject spriteObject;
     public GameObject[] mouths;
+
+    public GameObject attackBeamObject;
 
     #region *** Group ONE ***
     public override void Q_start()
@@ -72,6 +74,10 @@ public class CIV_JOSHUA_SpecialController : SpecialControllerBase
     #endregion
 
     #region *** Group TWO ***
+    public override void A_start()
+    {
+        attackBeamObject.SetActive(!attackBeamObject.activeSelf);
+    }
     #endregion
 
     #region *** Group THREE ***

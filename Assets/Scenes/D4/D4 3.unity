@@ -842,6 +842,10 @@ PrefabInstance:
       propertyPath: fileToLoad
       value: 
       objectReference: {fileID: 102900000, guid: f37a9e08578e1d34f82d8e7fb665f4b0, type: 3}
+    - target: {fileID: 5731992185702093710, guid: 0ae42f261abb997449b939462cab8bfd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7453739355296928848, guid: 0ae42f261abb997449b939462cab8bfd, type: 3}
       propertyPath: m_Name
       value: MECH - Liam
@@ -1866,6 +1870,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 312512051}
     m_Modifications:
+    - target: {fileID: 74180041933230933, guid: f3f3a02fb9580c44b871b1696958027a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5460338049788286698, guid: f3f3a02fb9580c44b871b1696958027a, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -2558,6 +2566,10 @@ PrefabInstance:
     - target: {fileID: 6330060579530738, guid: d1f302e26590c424d9343a0e0f57961a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5000698697470153385, guid: d1f302e26590c424d9343a0e0f57961a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5019338671565580928, guid: d1f302e26590c424d9343a0e0f57961a, type: 3}
       propertyPath: fileToLoad
