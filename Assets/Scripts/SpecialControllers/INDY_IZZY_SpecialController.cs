@@ -15,7 +15,7 @@ public class INDY_IZZY_SpecialController : SpecialControllerBase
     // A > Gun Idle
     // S > Gun Run
     // D > Gun Jump
-    // F > 
+    // F > Gun Fire
     // G > 
     // H > 
     // J > 
@@ -31,6 +31,8 @@ public class INDY_IZZY_SpecialController : SpecialControllerBase
     public Animator characterAnim;
     public GameObject spriteObject;
     public GameObject[] mouths;
+
+    public ProjectileFirer laserGun;
 
     #region *** Group ONE ***
     public override void Q_start()
@@ -85,6 +87,16 @@ public class INDY_IZZY_SpecialController : SpecialControllerBase
     public override void D_start()
     {
         characterAnim.SetTrigger("gun_jump");
+    }
+
+    public override void F_start()
+    {
+        laserGun.FireProjectile();
+    }
+
+    public override void G_start()
+    {
+        characterAnim.SetTrigger("throw");
     }
     #endregion
 

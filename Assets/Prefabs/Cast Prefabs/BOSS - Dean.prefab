@@ -462,7 +462,7 @@ GameObject:
   - component: {fileID: 1909850890981823082}
   m_Layer: 8
   m_Name: BOSS - Dean
-  m_TagString: Untagged
+  m_TagString: dean
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -532,7 +532,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8307744186082153118}
   m_BodyType: 1
-  m_Simulated: 0
+  m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1

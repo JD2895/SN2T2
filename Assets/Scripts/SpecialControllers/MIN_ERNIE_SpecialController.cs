@@ -13,8 +13,8 @@ public class MIN_ERNIE_SpecialController : SpecialControllerBase
     // U > Battle
 
     // A > Throw
-    // S > 
-    // D > 
+    // S > Hold Coins
+    // D > Fire Shovel
     // F > 
     // G > 
     // H > 
@@ -31,6 +31,8 @@ public class MIN_ERNIE_SpecialController : SpecialControllerBase
     public Animator characterAnim;
     public GameObject spriteObject;
     public GameObject[] mouths;
+
+    public ProjectileFirer shovelThrower;
 
     #region *** Group ONE ***
     public override void Q_start()
@@ -80,6 +82,11 @@ public class MIN_ERNIE_SpecialController : SpecialControllerBase
     public override void S_start()
     {
         characterAnim.SetTrigger("hold_coins");
+    }
+
+    public override void D_start()
+    {
+        shovelThrower.FireProjectile();
     }
     #endregion
 

@@ -22,6 +22,7 @@ public class ProjectileHelper : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log(this.gameObject.name + " hit: " + collision.tag);
         if (collision.tag == targetTag)
         {
             DestructionSequence();
@@ -40,6 +41,6 @@ public class ProjectileHelper : MonoBehaviour
         Instantiate(explosion, this.transform);
         if (p_Sys != null)
             p_Sys.Stop();
-        Destroy(this.gameObject, 5f);
+        Destroy(this.gameObject, 1.5f);
     }
 }

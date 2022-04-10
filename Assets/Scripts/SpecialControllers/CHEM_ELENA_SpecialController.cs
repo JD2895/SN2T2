@@ -12,8 +12,8 @@ public class CHEM_ELENA_SpecialController : SpecialControllerBase
     // Y > Battle
     // U > Throw
 
-    // A >
-    // S > 
+    // A > Throw Green Potion
+    // S > Throw Red Potion
     // D > 
     // F > 
     // G > 
@@ -31,6 +31,9 @@ public class CHEM_ELENA_SpecialController : SpecialControllerBase
     public Animator characterAnim;
     public GameObject spriteObject;
     public GameObject[] mouths;
+
+    public ProjectileFirer greenPotionThrower;
+    public ProjectileFirer redPotionThrower;
 
     #region *** Group ONE ***
     public override void Q_start()
@@ -72,6 +75,16 @@ public class CHEM_ELENA_SpecialController : SpecialControllerBase
     #endregion
 
     #region *** Group TWO ***
+    public override void A_start()
+    {
+        greenPotionThrower.FireProjectile();
+    }
+
+    public override void S_start()
+    {
+        redPotionThrower.firingSpeed = Random.Range(9f, 16f);
+        redPotionThrower.FireProjectile();
+    }
     #endregion
 
     #region *** Group THREE ***

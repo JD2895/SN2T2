@@ -68,6 +68,12 @@ TextureImporter:
   - first:
       213: 5424293189321575897
     second: INDY - Izzy_21
+  - first:
+      213: 6738763092327656601
+    second: INDY - Izzy_22
+  - first:
+      213: 9168010572701870247
+    second: INDY - Izzy_23
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -614,6 +620,48 @@ TextureImporter:
       bones: []
       spriteID: 9dd4513aae5f64b40800000000000000
       internalID: 5424293189321575897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INDY - Izzy_22
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 0
+        width: 64
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99ce3b73455e48d50800000000000000
+      internalID: 6738763092327656601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: INDY - Izzy_23
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 0
+        width: 64
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a8abeaaa015b3f70800000000000000
+      internalID: 9168010572701870247
       vertices: []
       indices: 
       edges: []
