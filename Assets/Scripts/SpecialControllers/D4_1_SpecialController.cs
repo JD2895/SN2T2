@@ -34,6 +34,9 @@ public class D4_1_SpecialController : SpecialControllerBase
     public GameObject bossObject;
     public Transform bossStartPos;
     public Transform bossEndPos;
+    public GameObject tieObject;
+    public Transform tieStartPos;
+    public Transform tieEndPos;
     public float moveInTime;
 
     private void Start()
@@ -76,11 +79,13 @@ public class D4_1_SpecialController : SpecialControllerBase
     #region *** Group TWO ***
     public override void A_start()
     {
-        StartCoroutine(MoveInBoss());
+        //StartCoroutine(MoveInBoss());
+        StartCoroutine(MoveInObject(bossObject, bossStartPos.position, bossEndPos.position));
     }
 
     public override void S_start()
     {
+        StartCoroutine(MoveInObject(tieObject, tieStartPos.position, tieEndPos.position));
     }
     #endregion
 
@@ -132,6 +137,28 @@ public class D4_1_SpecialController : SpecialControllerBase
         }
 
         bossObject.transform.position = endPos;
+
+        yield return null;
+    }
+
+    IEnumerator MoveInObject(GameObject movingObject, Vector3 startPos, Vector3 endPos)
+    {
+        Vector3 newPos = new Vector3();
+        float timePeriod = 0.01f;
+        float lerpPeriod = timePeriod / moveInTime;
+        float lerpValue = 0;
+
+        movingObject.transform.position = startPos;
+
+        for (float timePassed = 0f; timePassed < moveInTime; timePassed += timePeriod)
+        {
+            newPos = Vector3.Lerp(startPos, endPos, lerpValue);
+            movingObject.transform.position = newPos;
+            lerpValue += lerpPeriod;
+            yield return new WaitForSeconds(timePeriod);
+        }
+
+        movingObject.transform.position = endPos;
 
         yield return null;
     }

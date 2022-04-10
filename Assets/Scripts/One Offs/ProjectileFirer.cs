@@ -8,11 +8,12 @@ public class ProjectileFirer : MonoBehaviour
     public Vector2 firingDirection;
     public float firingSpeed;
     public string targetTag;
+    public string targetTag2 = "none";
 
     public void FireProjectile()
     {
         GameObject newProjectile = Instantiate(projectilePrefab, this.transform.position, Quaternion.identity);
         ProjectileHelper newProjectileHelper = newProjectile.GetComponent<ProjectileHelper>();
-        newProjectileHelper.Fire(firingDirection, firingSpeed, targetTag);
+        newProjectileHelper.Fire(firingDirection, firingSpeed, targetTag, targetTag2);
     }
 }

@@ -32,6 +32,9 @@ TextureImporter:
   - first:
       213: -8943885409777422187
     second: ENGSCI - Steph_9
+  - first:
+      213: 6832465746557829393
+    second: ENGSCI - Steph_10
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -326,6 +329,27 @@ TextureImporter:
       bones: []
       spriteID: 590fa664b9fe0e380800000000000000
       internalID: -8943885409777422187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ENGSCI - Steph_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 64
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1118a93856bc1de50800000000000000
+      internalID: 6832465746557829393
       vertices: []
       indices: 
       edges: []

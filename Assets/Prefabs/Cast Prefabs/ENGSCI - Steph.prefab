@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 7381109386247813792}
   m_Layer: 8
   m_Name: ENGSCI - Steph
-  m_TagString: Untagged
+  m_TagString: engsci
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

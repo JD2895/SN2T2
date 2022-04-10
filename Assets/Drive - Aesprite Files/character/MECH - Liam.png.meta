@@ -53,6 +53,9 @@ TextureImporter:
   - first:
       213: 217757487877272977
     second: MECH - Liam_16
+  - first:
+      213: 5414791652299996771
+    second: MECH - Liam_17
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -494,6 +497,27 @@ TextureImporter:
       bones: []
       spriteID: 1953b101841a50300800000000000000
       internalID: 217757487877272977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MECH - Liam_17
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 0
+        width: 64
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e7718a154352b40800000000000000
+      internalID: 5414791652299996771
       vertices: []
       indices: 
       edges: []
