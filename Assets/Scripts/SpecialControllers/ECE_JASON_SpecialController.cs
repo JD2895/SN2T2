@@ -88,7 +88,7 @@ public class ECE_JASON_SpecialController : SpecialControllerBase
     public override void D_start()
     {
         title.SetActive(false);
-        deadTitle.SetActive(false);
+        deadTitle.SetActive(true);
     }
     #endregion
 
