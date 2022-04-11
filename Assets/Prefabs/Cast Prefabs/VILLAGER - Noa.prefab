@@ -51,6 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccd8e2b05c559cf4f91e61321996c4a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sideMoveMax: 4
 --- !u!114 &3801595702006524638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,7 +282,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 3
   m_Sprite: {fileID: -7234433253692041272, guid: d1f249489e5d06640add8040f1e5b295, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
