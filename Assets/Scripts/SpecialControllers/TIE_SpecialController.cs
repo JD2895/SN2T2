@@ -6,8 +6,8 @@ public class TIE_SpecialController : SpecialControllerBase
 {
     // Q > Idle
     // W > Idle Float
-    // E > Idle Bounce
-    // R > Idle Bounce 2
+    // E > Bounce Around
+    // R > Bounce Around 2
     // T > Yeet
     // Y > 
     // U > 
@@ -34,7 +34,7 @@ public class TIE_SpecialController : SpecialControllerBase
     #region *** Group ONE ***
     public override void Q_start()
     {
-        characterAnim.SetTrigger("idle");
+        characterAnim.SetTrigger("idle_still");
     }
 
     public override void W_start()
@@ -44,12 +44,12 @@ public class TIE_SpecialController : SpecialControllerBase
 
     public override void E_start()
     {
-        characterAnim.SetTrigger("idle_bounce");
+        characterAnim.SetTrigger("bounce_around");
     }
 
     public override void R_start()
     {
-        characterAnim.SetTrigger("idle_bounce2");
+        characterAnim.SetTrigger("bounce_around2");
     }
 
     public override void T_start()

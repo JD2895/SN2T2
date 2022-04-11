@@ -321,6 +321,7 @@ MonoBehaviour:
   - {fileID: 1554434420383570804}
   - {fileID: 366968983783628953}
   - {fileID: 8076058434371801530}
+  shovelThrower: {fileID: 8434363278511919404}
 --- !u!50 &4362558676802365561
 Rigidbody2D:
   serializedVersion: 4
