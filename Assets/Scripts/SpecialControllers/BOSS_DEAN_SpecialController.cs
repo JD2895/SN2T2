@@ -12,7 +12,7 @@ public class BOSS_DEAN_SpecialController : SpecialControllerBase
     // Y > Toggle Title
     // U > Fire Laser
 
-    // A > 
+    // A > Switch Title
     // S > 
     // D > 
     // F > 
@@ -31,6 +31,7 @@ public class BOSS_DEAN_SpecialController : SpecialControllerBase
     public Animator characterAnim;
     public GameObject[] mouths;
     public GameObject title;
+    public GameObject deadTitle;
 
     public GameObject laserObject;
 
@@ -74,6 +75,8 @@ public class BOSS_DEAN_SpecialController : SpecialControllerBase
     #region *** Group TWO ***
     public override void A_start()
     {
+        title.SetActive(false);
+        deadTitle.SetActive(true);
     }
 
     public override void S_start()
