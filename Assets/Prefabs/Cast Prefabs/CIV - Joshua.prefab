@@ -235,6 +235,7 @@ MonoBehaviour:
   - {fileID: 839646657214740713}
   - {fileID: 1955353515332780804}
   - {fileID: 7937206947118182951}
+  attackBeamObject: {fileID: 165227070208246278}
 --- !u!50 &5915266912172144310
 Rigidbody2D:
   serializedVersion: 4

@@ -16,8 +16,8 @@ public class INDY_IZZY_SpecialController : SpecialControllerBase
     // S > Gun Run
     // D > Gun Jump
     // F > Gun Fire
-    // G > 
-    // H > 
+    // G > Throw
+    // H > Fire Potato
     // J > 
 
     // Z > Disable mouth
