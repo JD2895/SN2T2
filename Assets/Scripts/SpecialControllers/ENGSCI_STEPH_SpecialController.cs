@@ -84,7 +84,7 @@ public class ENGSCI_STEPH_SpecialController : SpecialControllerBase
     {
         spriteObject.SetActive(false);
         title.SetActive(false);
-        deadTitle.SetActive(false);
+        deadTitle.SetActive(true);
     }
     #endregion
 
