@@ -1906,6 +1906,8 @@ MonoBehaviour:
   tieStartPos: {fileID: 57277209}
   tieEndPos: {fileID: 2051143414}
   moveInTime: 5
+  healthField: {fileID: 3666044312564566963, guid: cbbe4cb36b3e49943bd336952a23a3c0, type: 3}
+  destructionField: {fileID: 4627603999825626220, guid: 2c070a0dd3c12084ea2da5b7a5cbaef0, type: 3}
 --- !u!1 &413532543
 GameObject:
   m_ObjectHideFlags: 0
@@ -5350,7 +5352,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 825934042, guid: b65af9f2086882c40800a70b20517c9a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2463970689435151879, guid: b65af9f2086882c40800a70b20517c9a, type: 3}
       propertyPath: m_RootOrder

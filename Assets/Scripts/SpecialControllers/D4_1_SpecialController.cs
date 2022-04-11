@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class D4_1_SpecialController : SpecialControllerBase
 {
-    // Q > Move Camera
-    // W > Move Camera 2
-    // E > 
-    // R > 
+    // Q > Pan To Ring
+    // W > Pan To Boss
+    // E > Instantiate Health Field
+    // R > Instantiate Destruction Field
     // T > 
     // Y > 
     // U > 
@@ -39,6 +39,9 @@ public class D4_1_SpecialController : SpecialControllerBase
     public Transform tieEndPos;
     public float moveInTime;
 
+    public GameObject healthField;
+    public GameObject destructionField;
+
     private void Start()
     {
         initialCameraPosition = Camera.main.transform.position;
@@ -57,10 +60,12 @@ public class D4_1_SpecialController : SpecialControllerBase
 
     public override void E_start()
     {
+        Instantiate(healthField, bossObject.transform);
     }
 
     public override void R_start()
     {
+        Instantiate(destructionField, bossObject.transform);
     }
 
     public override void T_start()
