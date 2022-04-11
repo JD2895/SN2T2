@@ -95,7 +95,7 @@ public class MECH_LIAM_SpecialController : SpecialControllerBase
     {
         spriteObject.SetActive(false);
         title.SetActive(false);
-        deadTitle.SetActive(false);
+        deadTitle.SetActive(true);
     }
 
     public override void G_start()
