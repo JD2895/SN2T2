@@ -265,7 +265,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -10.4165, y: -0.0959}
+  m_AnchoredPosition: {x: -10.65, y: -0.0959}
   m_SizeDelta: {x: -9.079, y: 2.027}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1308900
@@ -1741,6 +1741,8 @@ MonoBehaviour:
   buttonTitle: {fileID: 1558771826}
   whoToTeleport: []
   whereToTeleport: []
+  doorAnim: {fileID: 0}
+  telportBeam: {fileID: 0}
 --- !u!1 &419059572
 GameObject:
   m_ObjectHideFlags: 0
@@ -2752,7 +2754,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 793023259}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.51, y: 0, z: -10.48}
+  m_LocalPosition: {x: 1.56, y: -2.78, z: -10.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1205969464}
@@ -2849,7 +2851,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.5
+  orthographic size: 2.21
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

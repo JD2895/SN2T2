@@ -3793,7 +3793,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1129735037}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10.48}
+  m_LocalPosition: {x: 3.1, y: -1.76, z: -10.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 591349419}
@@ -3890,7 +3890,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.5
+  orthographic size: 3.56
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -6544,6 +6544,15 @@ MonoBehaviour:
   backWithHut: {fileID: 1124832716}
   newHutSprite: {fileID: 848337415446747365, guid: 9baedf07ee07bc442b81436fb356fd4f, type: 3}
   potatoesText: {fileID: 1862534734}
+  supportObject: {fileID: 0}
+  pipeAnimator: {fileID: 0}
+  plutObject: {fileID: 0}
+  buttonSprite: {fileID: 0}
+  buttonTitle: {fileID: 0}
+  whoToTeleport: []
+  whereToTeleport: []
+  doorAnim: {fileID: 0}
+  telportBeam: {fileID: 0}
 --- !u!1 &2086071285
 GameObject:
   m_ObjectHideFlags: 0
