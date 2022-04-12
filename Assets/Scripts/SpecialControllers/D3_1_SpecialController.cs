@@ -10,9 +10,9 @@ public class D3_1_SpecialController : SpecialControllerBase
     // R > Pipe Descend
     // T > Toggle Plutonium
     // Y > Button Light Up
-    // U > 
+    // U > Disable button title
 
-    // A > 
+    // A > Teleport All Instant
     // S > 
     // D > 
     // F > 
@@ -39,6 +39,9 @@ public class D3_1_SpecialController : SpecialControllerBase
     public GameObject plutObject;
     public SpriteRenderer buttonSprite;
     public GameObject buttonTitle;
+
+    public List<GameObject> whoToTeleport;
+    public List<Transform> whereToTeleport;
 
     private void Start()
     {
@@ -82,12 +85,17 @@ public class D3_1_SpecialController : SpecialControllerBase
 
     public override void U_start()
     {
+        buttonTitle.SetActive(false);
     }
     #endregion
 
     #region *** Group TWO ***
     public override void A_start()
     {
+        for (int i = 0; i < whoToTeleport.Count; i++)
+        {
+            whoToTeleport[i].transform.position = whereToTeleport[i].position;
+        }
     }
 
     public override void S_start()
