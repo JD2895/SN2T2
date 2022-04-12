@@ -43,6 +43,8 @@ public class D3_1_SpecialController : SpecialControllerBase
     public List<GameObject> whoToTeleport;
     public List<Transform> whereToTeleport;
 
+    public Animator doorAnim;
+
     private void Start()
     {
         potatoesText?.SetActive(false);
@@ -100,6 +102,7 @@ public class D3_1_SpecialController : SpecialControllerBase
 
     public override void S_start()
     {
+        doorAnim.SetTrigger("open");
     }
     #endregion
 
