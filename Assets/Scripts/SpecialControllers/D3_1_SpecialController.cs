@@ -6,10 +6,10 @@ public class D3_1_SpecialController : SpecialControllerBase
 {
     // Q > Change village hut
     // W > Potato text
-    // E > 
-    // R > 
-    // T > 
-    // Y > 
+    // E > Ladder bend
+    // R > Pipe Descend
+    // T > Toggle Plutonium
+    // Y > Button Light Up
     // U > 
 
     // A > 
@@ -33,8 +33,17 @@ public class D3_1_SpecialController : SpecialControllerBase
 
     public GameObject potatoesText;
 
+    public GameObject supportObject;
+    public Animator pipeAnimator;
+
+    public GameObject plutObject;
+    public SpriteRenderer buttonSprite;
+    public GameObject buttonTitle;
+
     private void Start()
     {
+        potatoesText?.SetActive(false);
+        supportObject?.SetActive(false);
     }
 
     #region *** Group ONE ***
@@ -50,18 +59,25 @@ public class D3_1_SpecialController : SpecialControllerBase
 
     public override void E_start()
     {
+        supportObject.SetActive(true);
     }
 
     public override void R_start()
     {
+        pipeAnimator.SetTrigger("descend");
     }
 
     public override void T_start()
     {
+        plutObject.SetActive(!plutObject.activeSelf);
     }
 
     public override void Y_start()
     {
+        Color buttonBright = buttonSprite.color;
+        buttonBright.r = buttonBright.g = buttonBright.b = 1f;
+        buttonSprite.color = buttonBright;
+        buttonTitle.SetActive(true);
     }
 
     public override void U_start()
