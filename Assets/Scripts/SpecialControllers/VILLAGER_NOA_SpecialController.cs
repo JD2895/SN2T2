@@ -9,7 +9,7 @@ public class VILLAGER_NOA_SpecialController : SpecialControllerBase
     // E > Run
     // R > Point
     // T > Give
-    // Y > 
+    // Y > Enable Title
     // U > 
 
     // A > 
@@ -31,6 +31,8 @@ public class VILLAGER_NOA_SpecialController : SpecialControllerBase
     public Animator characterAnim;
     public GameObject spriteObject;
     public GameObject[] mouths;
+
+    public GameObject title;
 
     #region *** Group ONE ***
     public override void Q_start()
@@ -58,6 +60,11 @@ public class VILLAGER_NOA_SpecialController : SpecialControllerBase
     public override void T_start()
     {
         characterAnim.SetTrigger("give");
+    }
+
+    public override void Y_start()
+    {
+        title.SetActive(true);
     }
     #endregion
 
