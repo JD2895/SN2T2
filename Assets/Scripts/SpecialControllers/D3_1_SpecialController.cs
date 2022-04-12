@@ -13,9 +13,9 @@ public class D3_1_SpecialController : SpecialControllerBase
     // U > Disable button title
 
     // A > Teleport All Instant
-    // S > 
-    // D > 
-    // F > 
+    // S > Open Door
+    // D > Teleport With Gap
+    // F > Cue Spawn Beams
     // G > 
     // H > 
     // J > 
@@ -44,6 +44,8 @@ public class D3_1_SpecialController : SpecialControllerBase
     public List<Transform> whereToTeleport;
 
     public Animator doorAnim;
+
+    public GameObject telportBeam;
 
     private void Start()
     {
@@ -104,6 +106,15 @@ public class D3_1_SpecialController : SpecialControllerBase
     {
         doorAnim.SetTrigger("open");
     }
+
+    public override void D_start()
+    {
+        StartCoroutine(SlowTeleport());
+    }
+
+    public override void F_start()
+    {
+    }
     #endregion
 
     #region *** Group THREE ***
@@ -131,6 +142,16 @@ public class D3_1_SpecialController : SpecialControllerBase
     #region *** Helpers ***
     public override void Reset()
     {
+    }
+
+    IEnumerator SlowTeleport()
+    {
+        for (int i = 0; i < whoToTeleport.Count; i++)
+        {
+            Instantiate(telportBeam, whereToTeleport[i].position, Quaternion.identity);
+            whoToTeleport[i].transform.position = whereToTeleport[i].position;
+            yield return new WaitForSeconds(0.2f);
+        }
     }
     #endregion
 }
