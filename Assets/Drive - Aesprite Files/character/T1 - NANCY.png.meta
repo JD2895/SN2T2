@@ -69,7 +69,7 @@ TextureImporter:
       213: -2539356314069218521
     second: T1 - NANCY_21
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -90,6 +90,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -128,6 +129,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -143,6 +145,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -628,6 +642,29 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      T1 - NANCY_6: 7097238217472492722
+      T1 - NANCY_10: 2692533740989890413
+      T1 - NANCY_11: -4104259469574135828
+      T1 - NANCY_9: 3720106361515296927
+      T1 - NANCY_13: -550927666672584123
+      T1 - NANCY_21: -2539356314069218521
+      T1 - NANCY_15: -6614877811041310986
+      T1 - NANCY_14: -1952740485384263418
+      T1 - NANCY_16: 3431764450349017459
+      T1 - NANCY_5: 4466149662518284397
+      T1 - NANCY_2: 1119187136908645087
+      T1 - NANCY_8: 4290488825958747717
+      T1 - NANCY_12: -6841142576121861983
+      T1 - NANCY_17: -8678183730980620197
+      T1 - NANCY_7: -2988999604536090742
+      T1 - NANCY_20: -7237148480871352203
+      T1 - NANCY_18: 426696122582040958
+      T1 - NANCY_1: 5313824659265132614
+      T1 - NANCY_19: -7335100847444453123
+      T1 - NANCY_4: 99593181862510468
+      T1 - NANCY_3: -6534176335115197925
+      T1 - NANCY_0: -8442193137214421873
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

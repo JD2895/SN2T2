@@ -84,7 +84,7 @@ TextureImporter:
       213: -2936795941635779993
     second: DeanTIEbot-top_26
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -105,6 +105,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -143,6 +144,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -158,6 +160,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -748,6 +762,34 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      DeanTIEbot-top_21: 953841180787132179
+      DeanTIEbot-top_7: 3055895648122603308
+      DeanTIEbot-top_20: -4563777749237444781
+      DeanTIEbot-top_2: -8068037737292136123
+      DeanTIEbot-top_24: 5716738676741847943
+      DeanTIEbot-top_19: 8215038627685013982
+      DeanTIEbot-top_23: -6422363313116202949
+      DeanTIEbot-top_15: 6452615757336072958
+      DeanTIEbot-top_1: -1273712956259235625
+      DeanTIEbot-top_13: 6700445047082699001
+      DeanTIEbot-top_3: -5474569098575347278
+      DeanTIEbot-top_17: 3474409194432105925
+      DeanTIEbot-top_5: 3043774528764795502
+      DeanTIEbot-top_22: -7196177789740837552
+      DeanTIEbot-top_0: -4931330541718718306
+      DeanTIEbot-top_12: 7375838012519252418
+      DeanTIEbot-top_25: -2754954099803805643
+      DeanTIEbot-top_26: -2936795941635779993
+      DeanTIEbot-top_14: -7975448324541417984
+      DeanTIEbot-top_18: 194123810686346953
+      DeanTIEbot-top_16: -5666774207507510441
+      DeanTIEbot-top_6: -1740826490854754421
+      DeanTIEbot-top_10: 3762792195133380481
+      DeanTIEbot-top_11: -2604127059784333167
+      DeanTIEbot-top_8: -6314034076445751544
+      DeanTIEbot-top_4: 7367588366468984563
+      DeanTIEbot-top_9: -4759499601869613662
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -48,7 +48,7 @@ TextureImporter:
       213: -8618423298411980464
     second: MIN - Ernie_14
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -69,6 +69,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -107,6 +108,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -122,6 +124,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -460,6 +474,22 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      MIN - Ernie_14: -8618423298411980464
+      MIN - Ernie_8: -8025292044005321111
+      MIN - Ernie_11: 3894392878875894547
+      MIN - Ernie_1: 7176718505252136809
+      MIN - Ernie_10: -146174158763624098
+      MIN - Ernie_3: -1119700227539895323
+      MIN - Ernie_9: 5597067628024552898
+      MIN - Ernie_12: 437372791450195117
+      MIN - Ernie_5: -7074697318682183218
+      MIN - Ernie_0: -3188696404994622654
+      MIN - Ernie_2: -6918376663781216064
+      MIN - Ernie_13: 2526515783253665103
+      MIN - Ernie_7: -7926194890757954924
+      MIN - Ernie_4: 6334138462100491953
+      MIN - Ernie_6: 5459025591604969666
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

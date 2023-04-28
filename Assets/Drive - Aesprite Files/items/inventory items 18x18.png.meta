@@ -105,7 +105,7 @@ TextureImporter:
       213: -7324867019188248967
     second: inventory items 18x18_33
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -126,6 +126,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -164,6 +165,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -179,6 +181,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -916,6 +930,41 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      inventory items 18x18_28: 5714283055285484677
+      inventory items 18x18_6: 6189928413858864781
+      inventory items 18x18_8: -204486089717660441
+      inventory items 18x18_21: -4383676749403174794
+      inventory items 18x18_31: -6746376146781160004
+      inventory items 18x18_12: -5238892454896228616
+      inventory items 18x18_15: 5776228967550804233
+      inventory items 18x18_0: 1557321083020189608
+      inventory items 18x18_16: -2630921878144742474
+      inventory items 18x18_32: -8386921481497638145
+      inventory items 18x18_23: 5841807822329798795
+      inventory items 18x18_5: 1222074143409184929
+      inventory items 18x18_14: -8540524286214235755
+      inventory items 18x18_22: -1996461114086108804
+      inventory items 18x18_3: -161464069725321785
+      inventory items 18x18_4: -4463624855301290524
+      inventory items 18x18_19: 8368972382256074088
+      inventory items 18x18_26: -4451805432295166234
+      inventory items 18x18_11: -7122849521714055573
+      inventory items 18x18_17: -9047637435505210788
+      inventory items 18x18_18: -745295179649096338
+      inventory items 18x18_27: 6582463719820632097
+      inventory items 18x18_1: 2552093299707955063
+      inventory items 18x18_10: 2904026818989968187
+      inventory items 18x18_29: -8124242647092584319
+      inventory items 18x18_2: -8095337802548447831
+      inventory items 18x18_13: 7220508910783136863
+      inventory items 18x18_30: 1109020509816920373
+      inventory items 18x18_25: -1158694470510915048
+      inventory items 18x18_20: 5646671221075822937
+      inventory items 18x18_9: 5923347778656150894
+      inventory items 18x18_7: -7665879454651653055
+      inventory items 18x18_33: -7324867019188248967
+      inventory items 18x18_24: -3657719216337298595
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

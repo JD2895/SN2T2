@@ -48,7 +48,7 @@ TextureImporter:
       213: -5481119214566024249
     second: ECE - Jason_14
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -69,6 +69,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -107,6 +108,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -122,6 +124,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -460,6 +474,22 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      ECE - Jason_14: -5481119214566024249
+      ECE - Jason_9: -1398432880236589305
+      ECE - Jason_6: 7146995164756271659
+      ECE - Jason_12: 7621600897435354372
+      ECE - Jason_0: -2283240458224158984
+      ECE - Jason_5: -7228577987675910531
+      ECE - Jason_2: -4911140367614669686
+      ECE - Jason_10: 8884992659724152551
+      ECE - Jason_3: 7208965128510322776
+      ECE - Jason_13: -7007921722924344818
+      ECE - Jason_8: -5939012833051991995
+      ECE - Jason_7: 1797762716849738212
+      ECE - Jason_4: 2117394722548058079
+      ECE - Jason_11: -4778203630016055036
+      ECE - Jason_1: 3287743688686128993
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

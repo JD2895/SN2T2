@@ -75,7 +75,7 @@ TextureImporter:
       213: 9168010572701870247
     second: INDY - Izzy_23
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -96,6 +96,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -134,6 +135,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -149,6 +151,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -676,6 +690,31 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      INDY - Izzy_17: -7418003329987132951
+      INDY - Izzy_20: -8710785881664792646
+      INDY - Izzy_18: -7747621743616155635
+      INDY - Izzy_13: 4219488454188057932
+      INDY - Izzy_14: 5692994828582024260
+      INDY - Izzy_23: 9168010572701870247
+      INDY - Izzy_15: 4652050304233001227
+      INDY - Izzy_10: -1548017038198673316
+      INDY - Izzy_0: 8016025329173057855
+      INDY - Izzy_2: 5108997609126118000
+      INDY - Izzy_9: 6572435165319048637
+      INDY - Izzy_5: 121552691497455558
+      INDY - Izzy_3: 6802727368239010860
+      INDY - Izzy_19: -2985182451608602201
+      INDY - Izzy_6: 5011656013499340902
+      INDY - Izzy_22: 6738763092327656601
+      INDY - Izzy_4: 7959637626338671898
+      INDY - Izzy_16: 6702446240724851070
+      INDY - Izzy_11: -1675117662537434914
+      INDY - Izzy_7: -7777233699826563138
+      INDY - Izzy_12: -8884510814039989414
+      INDY - Izzy_21: 5424293189321575897
+      INDY - Izzy_1: -6166189795685967873
+      INDY - Izzy_8: 3416752774140993683
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

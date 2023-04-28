@@ -111,7 +111,7 @@ TextureImporter:
       213: -1629348349073569124
     second: DeanBOSS_35
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -132,6 +132,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -170,6 +171,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -185,6 +187,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
@@ -964,6 +978,43 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      DeanBOSS_15: 3488035724814434937
+      DeanBOSS_12: -4365711381514969664
+      DeanBOSS_1: 7275526397692549721
+      DeanBOSS_25: 8076884234669527900
+      DeanBOSS_29: 4096718776250907075
+      DeanBOSS_11: 2566815569316903380
+      DeanBOSS_7: 2409039310013821460
+      DeanBOSS_19: 8762431238137487442
+      DeanBOSS_34: 492772424419587725
+      DeanBOSS_32: -4985725102240992775
+      DeanBOSS_17: -2796252032014028981
+      DeanBOSS_33: 3119135130298910104
+      DeanBOSS_5: -6578015274598169676
+      DeanBOSS_24: -1122410592034355151
+      DeanBOSS_35: -1629348349073569124
+      DeanBOSS_2: 2710481494647874787
+      DeanBOSS_26: -4388312320039592900
+      DeanBOSS_9: 411711277223732701
+      DeanBOSS_30: 8962763425316210844
+      DeanBOSS_4: -6856461949457644341
+      DeanBOSS_13: -5224817801340238935
+      DeanBOSS_6: -853792016852704792
+      DeanBOSS_31: 8986142920403047685
+      DeanBOSS_16: 5893070664541233497
+      DeanBOSS_23: 8676952642865006162
+      DeanBOSS_27: -1573617290332492932
+      DeanBOSS_14: 2705061030949086292
+      DeanBOSS_10: -1117166973475133854
+      DeanBOSS_8: 1518933400816948984
+      DeanBOSS_18: 2560379506052778051
+      DeanBOSS_20: -7726249890884708215
+      DeanBOSS_3: 6987228524969850743
+      DeanBOSS_28: 6328274931462546182
+      DeanBOSS_0: -1681276948389755187
+      DeanBOSS_22: -8298795603378519220
+      DeanBOSS_21: -8821132569832816666
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

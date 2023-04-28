@@ -57,7 +57,7 @@ TextureImporter:
       213: 5414791652299996771
     second: MECH - Liam_17
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -78,6 +78,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -116,6 +117,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -131,6 +133,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -532,6 +546,25 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      MECH - Liam_10: -3710316986542808836
+      MECH - Liam_4: -6157932593692034227
+      MECH - Liam_3: 3369602325298067286
+      MECH - Liam_8: -8516090013579157363
+      MECH - Liam_1: 7072136536311606505
+      MECH - Liam_7: -7476979709535970484
+      MECH - Liam_12: -9052217041909582120
+      MECH - Liam_11: 8244236253165599825
+      MECH - Liam_16: 217757487877272977
+      MECH - Liam_6: 6808767953621092694
+      MECH - Liam_15: 7584308340135048779
+      MECH - Liam_9: 7930057099632700389
+      MECH - Liam_0: -7309295748506831644
+      MECH - Liam_5: -6435412462873574246
+      MECH - Liam_17: 5414791652299996771
+      MECH - Liam_13: -3753197932119219183
+      MECH - Liam_2: -3084610607430296609
+      MECH - Liam_14: 8896263794634607445
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
