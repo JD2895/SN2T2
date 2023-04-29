@@ -79,7 +79,7 @@ jobs:
        env:
          BUTLER_CREDENTIALS: ${{ secrets.ITCH_IO_API_KEY }}
          CHANNEL: HTML
-         ITCH_GAME: SN2T2 - The Game
+         ITCH_GAME: "SN2T2 - The Game"
          ITCH_USER: JD2895
          BRANCH: itch-io
          PACKAGE: build/WebGL
