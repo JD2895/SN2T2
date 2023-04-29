@@ -6,7 +6,7 @@ public class PlatformSpawner : MonoBehaviour
 {
     float playerMaxSpeed;
     float playerJumpTime = 1.013593f;
-    public CharacterController charControl;
+    public PlayerController charControl;
 
     float nextSpawnDistance = 0;
     public GameObject platformPrefab;

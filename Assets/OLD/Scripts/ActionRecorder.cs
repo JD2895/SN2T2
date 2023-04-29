@@ -328,7 +328,9 @@ public class ActionRecorder : MonoBehaviour
 
     public void ReadFromFile()
     {
-        string path = AssetDatabase.GetAssetPath(fileToLoad);
+        //removing for web build
+        //string path = AssetDatabase.GetAssetPath(fileToLoad);
+        string path = "";
         try
         {
             using (StreamReader sr = new StreamReader(path))
